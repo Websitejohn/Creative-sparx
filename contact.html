@@ -165,13 +165,14 @@ Author URL: http://w3layouts.com
 </div>
 
 <!-- //contact block -->
+
 <!-- Footer -->
 <section class="w3l-footer py-sm-5 py-4">
   <div class="container">
     <div class="footer-content">
       <div class="row">
         <div class="col-lg-8 footer-left">
-          <p class="m-0">Alexander © Copyright 2020. Design by <a href="https://w3layouts.com">W3layouts</a></p>
+          <p class="m-0">Creative Sparx Studio © 2024. Designed by John Otolorin</p>
         </div>
         <div class="col-lg-4 footer-right text-lg-right text-center mt-lg-0 mt-3">
           <ul class="social m-0 p-0">
@@ -184,6 +185,39 @@ Author URL: http://w3layouts.com
       </div>
     </div>
   </div>
+<!-- Marquee -->
+<div class="custom-marquee">
+  <div class="marquee-content">
+      <p style="color: #ffffff;">Your success is our priority! &nbsp; | &nbsp; Bringing your ideas to life &nbsp; | &nbsp; Design that inspires &nbsp; | &nbsp; Quality you can trust &nbsp; | &nbsp; Let's create something amazing together!</p>
+  </div>
+</div>
+
+<style>
+  .custom-marquee {
+      background-color: orange; /* Marquee background color */
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 20px 0;
+  }
+
+  .marquee-content {
+      display: inline-block;
+      animation: marquee 50s linear infinite; /* Slower scrolling */
+      font-size: 2.5rem; /* Very large text */
+      font-weight: bold; /* Bold for emphasis */
+      color: #ffffff; /* White text */
+      text-transform: uppercase; /* Capitalize for emphasis */
+      padding-left: 100%; /* Start from right */
+      letter-spacing: 3px; /* Space between letters for clarity */
+  }
+
+  @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+  }
+</style>
+
 
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
