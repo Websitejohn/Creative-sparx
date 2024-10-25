@@ -91,7 +91,7 @@
               <h1 class="mb-4 title">We are <span class="typed-text"></span><span class="cursor">&nbsp</span></h1>
               <p>We are a dynamic design agency bringing your ideas to life with stunning graphic and web designs. Our passion lies in crafting unique, high-quality solutions that make your brand stand out.</p>
               <div class="mt-sm-5 mt-4">
-                  <a class="btn btn-primary btn-style mr-2" href="contact.html"> Work With Us </a>
+                  <a class="btn btn-primary btn-style mr-2" href="contact.html" style="margin-bottom: 20px;"> Work With Us </a>
                   <a class="btn btn-outline-primary btn-style mr-2" href="#portfolio"> View Portfolio </a>
               </div>
           </div>
@@ -416,39 +416,40 @@
       </div>
     </div>
   </div>
- <!-- Marquee -->
- <div class="custom-marquee">
+<!-- Marquee -->
+<div class="custom-marquee">
   <div class="marquee-content">
-    <p>Your success is our priority! &nbsp; | &nbsp; Bringing your ideas to life &nbsp; | &nbsp; Design that inspires &nbsp; | &nbsp; Quality you can trust &nbsp; | &nbsp; Let's create something amazing together!</p>
+      <p style="color: #ffffff;">Your success is our priority! &nbsp; | &nbsp; Bringing your ideas to life &nbsp; | &nbsp; Design that inspires &nbsp; | &nbsp; Quality you can trust &nbsp; | &nbsp; Let's create something amazing together!</p>
   </div>
 </div>
-<!-- Add the following CSS to style the marquee -->
+
 <style>
-    .custom-marquee {
-    background-color: orange; /* Marquee background color */
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    padding: 20px 0;
+  .custom-marquee {
+      background-color: orange; /* Marquee background color */
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 20px 0;
   }
 
   .marquee-content {
-    display: inline-block;
-    animation: marquee 20s linear infinite; /* Smooth scrolling */
-    font-size: 2.5rem; /* Very large text */
-    font-weight: bold; /* Bold for emphasis */
-    color: white; /* White text */
-    text-transform: uppercase; /* Capitalize for emphasis */
-    padding-left: 100%; /* Start from right */
-    letter-spacing: 3px; /* Space between letters for clarity */
+      display: inline-block;
+      animation: marquee 40s linear infinite; /* Slower scrolling */
+      font-size: 2.5rem; /* Very large text */
+      font-weight: bold; /* Bold for emphasis */
+      color: #ffffff; /* White text */
+      text-transform: uppercase; /* Capitalize for emphasis */
+      padding-left: 100%; /* Start from right */
+      letter-spacing: 3px; /* Space between letters for clarity */
   }
 
   @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
   }
-
 </style>
+
+
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
     <span class="fa fa-angle-up"></span>
