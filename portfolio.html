@@ -271,28 +271,29 @@
   
   <style>
     .custom-marquee {
-        background-color: orange; /* Marquee background color */
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-        padding: 20px 0;
-    }
-  
-    .marquee-content {
-        display: inline-block;
-        animation: marquee 50s linear infinite; /* Slower scrolling */
-        font-size: 2.5rem; /* Very large text */
-        font-weight: bold; /* Bold for emphasis */
-        color: #ffffff; /* White text */
-        text-transform: uppercase; /* Capitalize for emphasis */
-        padding-left: 100%; /* Start from right */
-        letter-spacing: 3px; /* Space between letters for clarity */
-    }
-  
-    @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
-    }
+      background-color: orange; /* Marquee background color */
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 20px 0 ;
+  }
+
+  .marquee-content {
+      display: inline-block;
+      animation: marquee 100s linear infinite; /* Slower scrolling */
+      font-size: 2.5rem; /* Very large text */
+      font-weight: bold; /* Bold for emphasis */
+      color: #ffffff; /* White text */
+      text-transform: uppercase; /* Capitalize for emphasis */
+      padding-left: 100%; /* Start from right */
+      margin-top: 15px;
+      letter-spacing: 3px; /* Space between letters for clarity */
+  }
+
+  @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+  }
   </style>
   
 
