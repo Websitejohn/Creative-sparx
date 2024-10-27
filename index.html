@@ -97,6 +97,32 @@
       }
     ]
   }
+
+  {
+    "name": "Creative Sparx Studio",
+    "short_name": "Creative Sparx",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#317EFB",
+    "icons": [
+      {
+        "src": "apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png"
+      },
+      {
+        "src": "favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "favicon-16x16.png",
+        "sizes": "16x16",
+        "type": "image/png"
+      }
+    ]
+  }
   </script>
 </head>
 
@@ -105,8 +131,6 @@
 <header id="site-header" class="fixed-top">
   <div class="container">
       <nav class="navbar navbar-expand-lg stroke">
-          
-         
       <a class="navbar-brand" href="#index.html">
           <img src="images/logo.png" alt="Your logo" title="Your logo" style="width: 200px;" height="auto" />
       </a> 
@@ -183,7 +207,7 @@
           <!-- Right Section with Image -->
             <div class="col-lg-6 col-md-8 col-sm-10 mt-lg-0 mt-4">
               <div class="img-effect text-lg-center">
-                  <img src="assets/images/photo.png" alt="myphoto" class="img-fluid">
+                  <img src="images/photo.png" alt="myphoto" class="img-fluid">
               </div>
           </div>
       </div>
@@ -198,7 +222,7 @@
           <div class="row">
               <div class="col-lg-4">
                   <div class="position-relative">
-                      <img src="assets/images/studio-photo.jpg" alt="Creative Sparx Studio" class="radius-image img-fluid">
+                      <img src="images/img1 (1).jpg" alt="Creative Sparx Studio" class="radius-image img-fluid">
                   </div>
               </div>
               <div class="col-lg-8 mt-lg-0 mt-5">
@@ -449,7 +473,7 @@
               </div>
               <div class="history-info mt-5">
                   <div class="position-relative">
-                      <img src="assets/images/bg.jpg" class="img-fluid radius-image video-popup-image"
+                      <img src="images/bg.jpg" class="img-fluid radius-image video-popup-image"
                           alt="video-popup">
 
                       <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center position-absolute">
@@ -460,8 +484,9 @@
 
                       <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
                       <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-                          <iframe src="https://www.youtube.com/embed/Cu2VnoRcxKM" allowfullscreen></iframe>
-                      </div>
+                        <iframe src="images/vid.mp4" allowfullscreen controls></iframe>
+                    </div>
+                    
                   </div>
               </div>
           </div>
@@ -501,6 +526,8 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
 <!-- Marquee -->
 <div class="custom-marquee">
   <div class="marquee-content">
@@ -509,7 +536,7 @@
 </div>
 
 <style>
-  .custom-marquee {
+ .custom-marquee {
       background-color: orange; /* Marquee background color */
       overflow: hidden;
       white-space: nowrap;
@@ -534,7 +561,6 @@
       100% { transform: translateX(-100%); }
   }
 </style>
-
 
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
