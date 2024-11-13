@@ -30,6 +30,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
  <!-- google fonts -->  
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   
   <!-- Template CSS -->
@@ -129,6 +130,105 @@
     ]
   }
   </script>
+  <style>
+   
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+  
+
+    /* Outer Card Styling */
+.outer-card {
+    padding: 10px;  /* Add padding around the inner project card */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;  /* For hover effect */
+    border: 1px solid #ddd;;
+}
+
+/* Hover Effect for Outer Card */
+.outer-card:hover {
+    border: 1px solid #ffc200;
+}
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+    }
+    .project-card {
+        overflow: hidden;
+        transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .project-card img:hover {
+        transform: scale(3rem);
+    }
+    .project-card img {
+    width: 100%; /* Set the width to 100% to take up the available space */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    display: block;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+}
+
+
+    
+    .project-content {
+        padding: 15px;
+    }
+    .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .project-tags {
+        margin-bottom: 10px;
+    }
+    .project-tag {
+        display: inline-block;
+        background-color: #faf094a1;
+        color: #ffc200;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        margin-right: 5px;
+    }
+    .project-description {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    .visit-link {
+        display: inline-block;
+        color: #ffc200;
+        text-decoration: none;
+        font-weight: bold;
+        border: 2px solid #ffc200;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .visit-link:hover {
+        background-color: #ffc200;
+        color: #fff;
+    }
+
+    .fas.fa-arrow-up {
+            display: inline-block;
+            transform: rotate(45deg); /* Rotate the arrow 45 degrees */
+        }
+
+ .project-status-label {
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+
+</style>
 </head>
 
 <!-- header -->
@@ -210,48 +310,76 @@
 <!-- portfolio -->
 <section class="w3-gallery py-5">
     <div class="container py-lg-5">
-        <ul class="portfolio-categ filter text-center mb-4 p-0">
-            <li class="port-filter all active">
-                <a href="#">Show All</a>
-            </li>
-            <li class="cat-item-1">
-                <a href="#" title="Category 1">Architecture</a>
-            </li>
-            <li class="cat-item-2">
-                <a href="#" title="Category 2">Web Design</a>
-            </li>
-            <li class="cat-item-3">
-                <a href="#" title="Category 3">Creative</a>
-            </li>
-            <li class="cat-item-4">
-                <a href="#" title="Category 4">Portfolio</a>
-            </li>
-        </ul>
+      <ul class="portfolio-categ filter text-center mb-4 p-0">
+        <li class="port-filter all active">
+            <a href="#">Show All</a>
+        </li>
+        <li class="cat-item-1">
+            <a href="#" title="Logo Design">Logo Design</a>
+        </li>
+        <li class="cat-item-2">
+            <a href="#" title="Web Design">Web Design</a>
+        </li>
+        <li class="cat-item-3">
+            <a href="#" title="Search Engine Optimization">Search Engine Optimization</a>
+        </li>
+        <li class="cat-item-4">
+            <a href="#" title="Social Media Design">Social Media Design</a>
+        </li>
+    </ul>
+    
         <ul class="portfolio-area clearfix p-0 m-0">
-            <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-1">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p1.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p1.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Pink flowers</h3>
-                            <p class="content-text">This is a short description</p>
+          <div class="project-grid">
+            <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
+              <div class="outer-card">
+                <div class="project-card">
+                    <img src="images/blog1.jpg" alt="The Taw-Ally Place School">
+                    <div class="project-content">
+                      <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host Expired</span></h2>
+                    
+                        <div class="project-tags">
+                            <span class="project-tag">Education</span>
+                            <span class="project-tag">New</span>
                         </div>
-                    </a>
-                </span>
+                        <p class="project-description">Empowering young minds with quality education tailored for academic and personal excellence.</p>
+                        <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
+                    </div>
+                </div>
+              </div>
             </li>
             <li class="portfolio-item2 content" data-id="id-2" data-type="cat-item-2">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p2.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p2.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Headphones</h3>
-                            <p class="content-text">This is a short description</p>
+              <div class="outer-card">
+                <div class="project-card">
+                    <img src="images/bg.jpg" alt="Westside ABA">
+                    <div class="project-content">
+                        <h2 class="project-title">Westside ABA</h2>
+                        <div class="project-tags">
+                            <span class="project-tag">Therapy</span>
+                            <span class="project-tag">Behavioral</span>
                         </div>
-                    </a>
-                </span>
+                        <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve the quality of life for individuals and families.</p>
+                        <a href="#" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
+                    </div>
+                </div>
+              </div>
             </li>
+            <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-2">
+              <div class="outer-card">
+                <div class="project-card">
+                    <img src="images/myphoto.jpg" alt="Creative Sparx Studio">
+                    <div class="project-content">
+                        <h2 class="project-title">Creative Sparx Studio</h2>
+                        <div class="project-tags">
+                            <span class="project-tag">Design</span>
+                            <span class="project-tag">Creative</span>
+                        </div>
+                        <p class="project-description">Transforming ideas into stunning visual and interactive experiences through cutting-edge design.</p>
+                        <a href="www.creativesparx.com.ng" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
+                    </div>
+                </div>
+              </div>
+            </li>
+        </div>
             <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-1">
                 <span class="image-block">
                     <a class="image-zoom" href="images/p3.jpg" data-gal="prettyPhoto[gallery]">
