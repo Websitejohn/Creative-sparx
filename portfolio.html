@@ -6,47 +6,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
- <!-- Basic Meta Tags -->
- <title>Creative Sparx Studio - Professional Web and Graphic Design Services in Nigeria</title>
- <meta name="description" content="Creative Sparx Studio offers top-quality web design, graphic design, and digital solutions in Nigeria to help elevate your brand and online presence." />
- <meta name="keywords" content="Creative Sparx Studio, web design, graphic design, digital solutions, Nigeria, branding, SEO" />
- <meta name="robots" content="index, follow" />
- 
- <!-- Open Graph Tags for Social Sharing -->
- <meta property="og:title" content="Creative Sparx Studio - Professional Web and Graphic Design Services in Nigeria" />
- <meta property="og:description" content="Looking to enhance your online presence? Creative Sparx Studio specializes in web and graphic design to bring your vision to life." />
- <meta property="og:image" content="https://www.creativesparx.com.ng/images/creativesparx-banner.jpg" />
- <meta property="og:url" content="https://www.creativesparx.com.ng" />
- <meta property="og:type" content="website" />
+  <!-- Basic Meta Tags -->
+  <title>Creative Sparx Studio - Professional Web and Graphic Design Services in Nigeria</title>
+  <meta name="description"
+    content="Creative Sparx Studio offers top-quality web design, graphic design, and digital solutions in Nigeria to help elevate your brand and online presence." />
+  <meta name="keywords"
+    content="Creative Sparx Studio, web design, graphic design, digital solutions, Nigeria, branding, SEO" />
+  <meta name="robots" content="index, follow" />
 
- <!-- Twitter Card Tags -->
- <meta name="twitter:card" content="summary_large_image" />
- <meta name="twitter:title" content="Creative Sparx Studio - Web & Graphic Design Services" />
- <meta name="twitter:description" content="Creative Sparx Studio specializes in web and graphic design services to make your brand stand out online." />
- <meta name="twitter:image" content="https://www.creativesparx.com.ng/images/creativesparx-banner.jpg" />
-  
- <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <!-- Open Graph Tags for Social Sharing -->
+  <meta property="og:title" content="Creative Sparx Studio - Professional Web and Graphic Design Services in Nigeria" />
+  <meta property="og:description"
+    content="Looking to enhance your online presence? Creative Sparx Studio specializes in web and graphic design to bring your vision to life." />
+  <meta property="og:image" content="https://www.creativesparx.com.ng/images/creativesparx-banner.jpg" />
+  <meta property="og:url" content="https://www.creativesparx.com.ng" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Creative Sparx Studio - Web & Graphic Design Services" />
+  <meta name="twitter:description"
+    content="Creative Sparx Studio specializes in web and graphic design services to make your brand stand out online." />
+  <meta name="twitter:image" content="https://www.creativesparx.com.ng/images/creativesparx-banner.jpg" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
- <!-- google fonts -->  
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+  <!-- google fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <!-- Template CSS -->
   <link rel="stylesheet" href="assets/css/style-starter.css">
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0K652FJTJ4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K652FJTJ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-0K652FJTJ4');
-</script>
+    gtag('config', 'G-0K652FJTJ4');
+  </script>
 
-<!-- Organization and LocalBusiness Schema -->
-<script type="application/ld+json">
+  <!-- Organization and LocalBusiness Schema -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
@@ -76,7 +80,7 @@
     ]
   }
   </script>
-  
+
   <!-- Breadcrumb Schema -->
   <script type="application/ld+json">
   {
@@ -131,343 +135,413 @@
   }
   </script>
   <style>
-   
+    /* General Container Styling */
     .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 20px auto;
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px auto;
     }
-  
 
     /* Outer Card Styling */
-.outer-card {
-    padding: 10px;  /* Add padding around the inner project card */
-    transition: box-shadow 0.3s ease, transform 0.3s ease;  /* For hover effect */
-    border: 1px solid #ddd;;
-}
+    .outer-card {
+      padding: 10px;
+      /* Add padding around the inner project card */
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+      /* For hover effect */
+      border: 1px solid #ddd;
+      border-radius: 0;
+      opacity: 0;
+      /* Initially hidden for animation */
+      transform: translateY(20px);
+      /* Initial offset for animation */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      /* Smooth transition */
+    }
 
-/* Hover Effect for Outer Card */
-.outer-card:hover {
-    border: 1px solid #ffc200;
-}
+    /* Animation Class to Make Elements Visible */
+    .outer-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hover Effect for Outer Card */
+    .outer-card:hover {
+      border: 1px solid #ffc200;
+      border-radius: 0;
+    }
+
+    /* Grid Layout for Project Cards */
     .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      /* Increase gap for better spacing */
     }
+
+    /* Media Query for Tablet Screens */
+    @media (max-width: 992px) {
+      .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+    }
+
+    /* Media Query for Mobile Screens */
+    @media (max-width: 600px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Project Card Styling */
     .project-card {
-        overflow: hidden;
-        transition: box-shadow 0.3s, transform 0.3s;
+      width: 100%;
+      /* Ensure uniform width */
+      max-width: 320px;
+      /* Fixed max-width for consistency */
+      margin: 0 auto;
+      /* Center cards */
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s;
+      border-radius: 0;
     }
-    .project-card img:hover {
-        transform: scale(3rem);
-    }
+
+    /* Image Styling */
     .project-card img {
-    width: 100%; /* Set the width to 100% to take up the available space */
-    height: 200px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    display: block;
-    border-bottom: 1px solid #ddd;
-    margin: 0 auto;
-}
+      width: 100%;
+      height: 220px;
+      /* Uniform height for all images */
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #ddd;
+      margin: 0 auto;
+      border-radius: 0;
+    }
 
+    .project-card img:hover {
+      transform: scale(1.05);
+    }
 
-    
     .project-content {
-        padding: 15px;
+      padding: 15px;
     }
+
     .project-title {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
     }
+
     .project-tags {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
+
     .project-tag {
-        display: inline-block;
-        background-color: #ffe6cd;
-        color: #ff9501;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.9rem;
-        margin-right: 5px;
+      display: inline-block;
+      background-color: #ffe6cd;
+      color: #ff9501;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      margin-right: 5px;
     }
+
     .project-description {
-        font-size: 1rem;
-        color: #666;
-        margin-bottom: 15px;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
     }
+
     .visit-link {
-        display: inline-block;
-        color: #ff9501;
-        text-decoration: none;
-        font-weight: bold;
-        border: 2px solid #ff9501;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
+      display: inline-block;
+      color: #ff9501;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid #ff9501;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
     }
+
     .visit-link:hover {
-        background-color: #ff9501;
-        color: #fff;
+      background-color: #ff9501;
+      color: #fff;
     }
 
     .fas.fa-arrow-up {
-            display: inline-block;
-            transform: rotate(45deg); /* Rotate the arrow 45 degrees */
-        }
+      display: inline-block;
+      transform: rotate(45deg);
+      /* Rotate the arrow 45 degrees */
+    }
 
- .project-status-label {
-    display: inline-block;
-    background-color: #ff4d4d;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    margin-right: 5px;
-}
+    .project-status-label {
+      display: inline-block;
+      background-color: #ff4d4d;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      margin-right: 5px;
+    }
 
+    /* General animation styling */
+    .animated-element {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
 
-</style>
+    /* Visible state */
+    .animated-element.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
 <!-- header -->
 <header id="site-header" class="fixed-top">
   <div class="container">
-      <nav class="navbar navbar-expand-lg stroke">
-          
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="Your logo" title="Your logo" style="width: 100px;" height="auto" />
-        </a> 
-          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
-              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
-              
-          </button>
+    <nav class="navbar navbar-expand-lg stroke">
 
-          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav ml-auto">
-                  <li class="nav-item @@home__active">
-                      <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item @@about__active">
-                      <a class="nav-link" href="about.html">About</a>
-                  </li>
-                  <li class="nav-item @@services__active">
-                      <a class="nav-link" href="services.html">Services</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="portfolio.html">Portfolio</a>
-                  </li>
-                  <li class="nav-item dropdown @@blog__active">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Blog<span class="fa fa-angle-down"></span>
-                      </a>
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                          <a class="dropdown-item @@b__active" href="blog.html">Blog posts</a>
-                          <a class="dropdown-item @@bs__active" href="blog-single.html">Blog single</a>
-                      </div>
-                  </li>
-                  <li class="nav-item @@contact__active">
-                      <a class="nav-link" href="contact.html">Contact</a>
-                  </li>
-              </ul>
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="Your logo" title="Your logo" style="width: 100px;" height="auto" />
+      </a>
+      <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+        <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item @@home__active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item @@about__active">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item @@services__active">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item dropdown @@blog__active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Blog<span class="fa fa-angle-down"></span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+              <a class="dropdown-item @@b__active" href="blog.html">Blog posts</a>
+              <a class="dropdown-item @@bs__active" href="blog-single.html">Blog single</a>
+            </div>
+          </li>
+          <li class="nav-item @@contact__active">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- toggle switch for light and dark theme -->
+      <div class="mobile-position">
+        <nav class="navigation">
+          <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="mode-container">
+                <i class="gg-sun"></i>
+                <i class="gg-moon"></i>
+              </div>
+            </label>
           </div>
-          <!-- toggle switch for light and dark theme -->
-          <div class="mobile-position">
-              <nav class="navigation">
-                  <div class="theme-switch-wrapper">
-                      <label class="theme-switch" for="checkbox">
-                          <input type="checkbox" id="checkbox">
-                          <div class="mode-container">
-                              <i class="gg-sun"></i>
-                              <i class="gg-moon"></i>
-                          </div>
-                      </label>
-                  </div>
-              </nav>
-          </div>
-          <!-- //toggle switch for light and dark theme -->
-      </nav>
+        </nav>
+      </div>
+      <!-- //toggle switch for light and dark theme -->
+    </nav>
   </div>
 </header>
 <!-- //header -->
 
 <!-- portfolio breadcrumb -->
 <section class="w3l-about-breadcrumb text-center">
-    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
-        <div class="container py-2">
-            <h2 class="title">My Portfolio</h2>
-            <ul class="breadcrumbs-custom-path mt-2">
-                <li><a href="#url">Home</a></li>
-                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Portfolio </li>
-            </ul>
-        </div>
+  <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+    <div class="container py-2">
+      <h2 class="title">My Portfolio</h2>
+      <ul class="breadcrumbs-custom-path mt-2">
+        <li><a href="#url">Home</a></li>
+        <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Portfolio </li>
+      </ul>
     </div>
+  </div>
 </section>
 <!-- portfolio breadcrumb -->
 
 <!-- portfolio -->
-<section class="w3-gallery py-5">
-    <div class="container py-lg-5">
-      <ul class="portfolio-categ filter text-center mb-4 p-0">
-        <li class="port-filter all active">
-            <a href="#">Show All</a>
-        </li>
-        <li class="cat-item-1">
-            <a href="#" title="Logo Design">Logo Design</a>
-        </li>
-        <li class="cat-item-2">
-            <a href="#" title="Web Design">Web Design</a>
-        </li>
-        <li class="cat-item-3">
-            <a href="#" title="Search Engine Optimization">Search Engine Optimization</a>
-        </li>
-        <li class="cat-item-4">
-            <a href="#" title="Social Media Design">Social Media Design</a>
-        </li>
+<section class="w3-gallery py-5 animated-element">
+  <div class="container py-lg-5">
+    <ul class="portfolio-categ filter text-center mb-4 p-0">
+      <li class="port-filter all active">
+        <a href="#">Show All</a>
+      </li>
+      <li class="cat-item-1">
+        <a href="#" title="Logo Design">Logo Design</a>
+      </li>
+      <li class="cat-item-2">
+        <a href="#" title="Web Design">Web Design</a>
+      </li>
+      <li class="cat-item-3">
+        <a href="#" title="Search Engine Optimization">Search Engine Optimization</a>
+      </li>
+      <li class="cat-item-4">
+        <a href="#" title="Social Media Design">Social Media Design</a>
+      </li>
     </ul>
-    
-        <ul class="portfolio-area clearfix p-0 m-0">
-          <div class="project-grid">
-            <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
-              <div class="outer-card">
-                <div class="project-card">
-                    <img src="images/blog1.jpg" alt="The Taw-Ally Place School">
-                    <div class="project-content">
-                      <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host Expired</span></h2>
-                    
-                        <div class="project-tags">
-                            <span class="project-tag">Education</span>
-                            <span class="project-tag">New</span>
-                        </div>
-                        <p class="project-description">Empowering young minds with quality education tailored for academic and personal excellence.</p>
-                        <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
-                    </div>
+
+    <ul class="portfolio-area clearfix p-0 m-0">
+      <div class="project-grid">
+        <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
+          <div class="outer-card">
+            <div class="project-card">
+              <img src="images/blog1.jpg" alt="The Taw-Ally Place School">
+              <div class="project-content">
+                <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host
+                    Expired</span></h2>
+
+                <div class="project-tags">
+                  <span class="project-tag">Education</span>
+                  <span class="project-tag">New</span>
                 </div>
+                <p class="project-description">Empowering young minds with quality education tailored for academic and
+                  personal excellence.</p>
+                <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website <i
+                    class="fas fa-arrow-up"></i></a>
               </div>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-2" data-type="cat-item-2">
-              <div class="outer-card">
-                <div class="project-card">
-                    <img src="images/bg.jpg" alt="Westside ABA">
-                    <div class="project-content">
-                        <h2 class="project-title">Westside ABA</h2>
-                        <div class="project-tags">
-                            <span class="project-tag">Therapy</span>
-                            <span class="project-tag">Behavioral</span>
-                        </div>
-                        <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve the quality of life for individuals and families.</p>
-                        <a href="#" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
-                    </div>
+            </div>
+          </div>
+        </li>
+        <li class="portfolio-item2 content" data-id="id-2" data-type="cat-item-2">
+          <div class="outer-card">
+            <div class="project-card">
+              <img src="images/bg.jpg" alt="Westside ABA">
+              <div class="project-content">
+                <h2 class="project-title">Westside ABA</h2>
+                <div class="project-tags">
+                  <span class="project-tag">Therapy</span>
+                  <span class="project-tag">Behavioral</span>
                 </div>
+                <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve
+                  the quality of life for individuals and families.</p>
+                <a href="#" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
               </div>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-2">
-              <div class="outer-card">
-                <div class="project-card">
-                    <img src="images/myphoto.jpg" alt="Creative Sparx Studio">
-                    <div class="project-content">
-                        <h2 class="project-title">Creative Sparx Studio</h2>
-                        <div class="project-tags">
-                            <span class="project-tag">Design</span>
-                            <span class="project-tag">Creative</span>
-                        </div>
-                        <p class="project-description">Transforming ideas into stunning visual and interactive experiences through cutting-edge design.</p>
-                        <a href="www.creativesparx.com.ng" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
-                    </div>
+            </div>
+          </div>
+        </li>
+        <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-2">
+          <div class="outer-card">
+            <div class="project-card">
+              <img src="images/myphoto.jpg" alt="Creative Sparx Studio">
+              <div class="project-content">
+                <h2 class="project-title">Creative Sparx Studio</h2>
+                <div class="project-tags">
+                  <span class="project-tag">Design</span>
+                  <span class="project-tag">Creative</span>
                 </div>
+                <p class="project-description">Transforming ideas into stunning visual and interactive experiences
+                  through cutting-edge design.</p>
+                <a href="www.creativesparx.com.ng" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
               </div>
-            </li>
-        </div>
-            <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-1">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p3.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p3.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Pineapple</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p4.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p4.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Cup of tea</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p5.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p5.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Icecream</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p6.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p6.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Red berries</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p7.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p7.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Orange</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p8.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p8.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Black berries</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-            <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
-                <span class="image-block">
-                    <a class="image-zoom" href="images/p9.jpg" data-gal="prettyPhoto[gallery]">
-                        <div class="content-overlay"></div>
-                        <img src="images/p9.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">Orange mike</h3>
-                            <p class="content-text">This is a short description</p>
-                        </div>
-                    </a>
-                </span>
-            </li>
-        </ul>
-        <!--end portfolio-area -->
-    </div>
-    <!-- //gallery container -->
+            </div>
+          </div>
+        </li>
+      </div>
+      <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-1">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p3.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p3.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Pineapple</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p4.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p4.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Cup of tea</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p5.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p5.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Icecream</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p6.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p6.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Red berries</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p7.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p7.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Orange</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p8.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p8.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Black berries</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+      <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
+        <span class="image-block">
+          <a class="image-zoom" href="images/p9.jpg" data-gal="prettyPhoto[gallery]">
+            <div class="content-overlay"></div>
+            <img src="images/p9.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
+            <div class="content-details fadeIn-bottom">
+              <h3 class="content-title">Orange mike</h3>
+              <p class="content-text">This is a short description</p>
+            </div>
+          </a>
+        </span>
+      </li>
+    </ul>
+    <!--end portfolio-area -->
+  </div>
+  <!-- //gallery container -->
 </section>
 <!-- //portfolio -->
 <!-- Footer -->
@@ -491,39 +565,54 @@
   </div>
   <br>
   <br>
-<!-- Marquee -->
-<div class="custom-marquee">
-  <div class="marquee-content">
-      <p style="color: #ffffff;">Your success is our priority! &nbsp; | &nbsp; Bringing your ideas to life &nbsp; | &nbsp; Design that inspires &nbsp; | &nbsp; Quality you can trust &nbsp; | &nbsp; Let's create something amazing together!</p>
+  <!-- Marquee -->
+  <div class="custom-marquee">
+    <div class="marquee-content">
+      <p style="color: #ffffff;">Your success is our priority! &nbsp; | &nbsp; Bringing your ideas to life &nbsp; |
+        &nbsp; Design that inspires &nbsp; | &nbsp; Quality you can trust &nbsp; | &nbsp; Let's create something amazing
+        together!</p>
+    </div>
   </div>
-</div>
 
-<style>
- .custom-marquee {
-      background-color: orange; /* Marquee background color */
+  <style>
+    .custom-marquee {
+      background-color: orange;
+      /* Marquee background color */
       overflow: hidden;
       white-space: nowrap;
       position: relative;
-      padding: 20px 0 ;
-  }
+      padding: 20px 0;
+    }
 
-  .marquee-content {
+    .marquee-content {
       display: inline-block;
-      animation: marquee 100s linear infinite; /* Slower scrolling */
-      font-size: 2.5rem; /* Very large text */
-      font-weight: bold; /* Bold for emphasis */
-      color: #ffffff; /* White text */
-      text-transform: uppercase; /* Capitalize for emphasis */
-      padding-left: 100%; /* Start from right */
+      animation: marquee 100s linear infinite;
+      /* Slower scrolling */
+      font-size: 2.5rem;
+      /* Very large text */
+      font-weight: bold;
+      /* Bold for emphasis */
+      color: #ffffff;
+      /* White text */
+      text-transform: uppercase;
+      /* Capitalize for emphasis */
+      padding-left: 100%;
+      /* Start from right */
       margin-top: 15px;
-      letter-spacing: 3px; /* Space between letters for clarity */
-  }
+      letter-spacing: 3px;
+      /* Space between letters for clarity */
+    }
 
-  @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-  }
-</style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
   <!-- move top -->
   <button onclick="topFunction()" id="movetop" title="Go to top">
     <span class="fa fa-angle-up"></span>
@@ -762,7 +851,44 @@
   });
 </script>
 <!-- disable body scroll which navbar is in active -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.outer-card');
 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once the animation is triggered
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      observer.observe(card);
+    });
+  });
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.animated-element');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+      observer.observe(element);
+    });
+  });
+
+</script>
 <!--/MENU-JS-->
 <script>
   $(window).on("scroll", function () {
@@ -803,6 +929,10 @@
 <script src="js/bootstrap.min.js"></script>
 
 
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8ce6dbab39e6b772',t:'MTcyODIzMDM2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+<script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8ce6dbab39e6b772',t:'MTcyODIzMDM2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+<iframe height="1" width="1"
+  style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
 
-</body></html>
+</body>
+
+</html>
