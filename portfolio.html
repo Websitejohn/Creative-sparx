@@ -160,7 +160,6 @@
     /* Animation Class to Make Elements Visible */
     .outer-card.visible {
       opacity: 1;
-      transform: translateY(0);
     }
 
     /* Hover Effect for Outer Card */
@@ -194,9 +193,6 @@
     /* Project Card Styling */
     .project-card {
       width: 100%;
-      /* Ensure uniform width */
-      max-width: 320px;
-      /* Fixed max-width for consistency */
       margin: 0;
       /* Center cards */
       overflow: hidden;
@@ -231,34 +227,29 @@
 
     .project-tag {
       display: inline-block;
-      background-color: #ffe6cd;
-      color: #ff9501;
+      background-color: #f2f2f2;
+      color: #0c9082;
       padding: 5px 10px;
-      border-radius: 5px;
       font-size: 0.9rem;
       margin-right: 5px;
+      margin-left: 10px;
     }
 
     .project-description {
       font-size: 1rem;
-      color: #666;
       margin-bottom: 15px;
     }
 
     .visit-link {
       display: inline-block;
-      color: #ff9501;
+      color: #000000;
       text-decoration: none;
-      font-weight: bold;
-      border: 2px solid #ff9501;
-      padding: 8px 15px;
-      border-radius: 5px;
+      font-size: 1.5em;
       transition: background-color 0.3s, color 0.3s;
     }
 
     .visit-link:hover {
-      background-color: #ff9501;
-      color: #fff;
+      color: #ff9501;
     }
 
     .fas.fa-arrow-up {
@@ -272,7 +263,6 @@
       background-color: #ff4d4d;
       color: #fff;
       padding: 5px 10px;
-      border-radius: 5px;
       font-size: 0.9rem;
       margin-right: 5px;
     }
@@ -339,10 +329,6 @@
   transition: transform 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-}
-
 .media-container {
   width: 100%;
   height: 220px;
@@ -358,7 +344,6 @@
 
 .project-content {
   padding: 15px;
-  background-color: #fff;
 }
 
 /* Responsive adjustments */
@@ -519,18 +504,15 @@
               <div class="media-container">
                 <img src="images/taw-ally.png" alt="The Taw-Ally Place School" class="project-image">
                 <video class="project-video" preload="metadata" muted>
-                  <source src="images/The Taw-Ally Place School-Home - Google Chrome 2024-11-14 10-35-04.mp4" type="video/mp4">
+                  <source src="images/The Taw-Ally Place School-Home - Google Chrome 2024-11-14 11-03-03.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="project-content">
                 <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host
-                    Expired</span></h2>
+                    Expired</span> <span class="project-tag">Education</span>
+                    <span class="project-tag">New</span></h2>
 
-                <div class="project-tags">
-                  <span class="project-tag">Education</span>
-                  <span class="project-tag">New</span>
-                </div>
                 <p class="project-description">Empowering young minds with quality education tailored for academic and
                   personal excellence.</p>
                 <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website  <i
@@ -551,11 +533,9 @@
               </div>
               
               <div class="project-content">
-                <h2 class="project-title">Westside ABA</h2>
-                <div class="project-tags">
-                  <span class="project-tag">Therapy</span>
-                  <span class="project-tag">Behavioral</span>
-                </div>
+                <h2 class="project-title">Westside ABA <span class="project-tag">Therapy</span>
+                  <span class="project-tag">Behavioral</span></h2>
+                
                 <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve
                   the quality of life for individuals and families.</p>
                 <a href="#" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
