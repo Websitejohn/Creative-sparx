@@ -34,7 +34,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
   <!-- google fonts -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Template CSS -->
@@ -144,7 +143,7 @@
 
     /* Outer Card Styling */
     .outer-card {
-      padding: 10px;
+      padding: 20px;
       /* Add padding around the inner project card */
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       /* For hover effect */
@@ -198,7 +197,7 @@
       /* Ensure uniform width */
       max-width: 320px;
       /* Fixed max-width for consistency */
-      margin: 0 auto;
+      margin: 0;
       /* Center cards */
       overflow: hidden;
       transition: box-shadow 0.3s, transform 0.3s;
@@ -219,10 +218,6 @@
 
     .project-card img:hover {
       transform: scale(1.05);
-    }
-
-    .project-content {
-      padding: 15px;
     }
 
     .project-title {
@@ -333,7 +328,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 20px;
 }
 
 /* Styling for individual project cards */
@@ -497,35 +491,35 @@
 <!-- portfolio breadcrumb -->
 
 <!-- portfolio -->
-<section class="w3-gallery py-5 ">
+<section class="w3-gallery py-5">
   <div class="container py-lg-5">
     <ul class="portfolio-categ filter text-center mb-4 p-0">
       <li class="port-filter all active">
         <a href="#">Show All</a>
       </li>
       <li class="cat-item-1">
-        <a href="#" title="Logo Design">Logo Design</a>
+        <a href="#" title="Category 1">Architecture</a>
       </li>
       <li class="cat-item-2">
-        <a href="#" title="Web Design">Web Design</a>
+        <a href="#" title="Category 2">Web Design</a>
       </li>
       <li class="cat-item-3">
-        <a href="#" title="Search Engine Optimization">Search Engine Optimization</a>
+        <a href="#" title="Category 3">Creative</a>
       </li>
       <li class="cat-item-4">
-        <a href="#" title="Social Media Design">Social Media Design</a>
+        <a href="#" title="Category 4">Portfolio</a>
       </li>
     </ul>
 
-    <ul class="portfolio-area clearfix p-0 m-0 ">
+    <ul class="clearfix ">
       <div class="project-grid">
         <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
-                <img src="images/blog1.jpg" alt="The Taw-Ally Place School" class="project-image">
+                <img src="images/taw-ally.png" alt="The Taw-Ally Place School" class="project-image">
                 <video class="project-video" preload="metadata" muted>
-                  <source src="images/vid2.mp4" type="video/mp4">
+                  <source src="images/The Taw-Ally Place School-Home - Google Chrome 2024-11-14 10-35-04.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -549,9 +543,9 @@
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
-                <img src="images/wst.jpg" alt="Westside ABA" class="project-image">
+                <img src="images/wst.png" alt="Westside ABA" class="project-image">
                 <video class="project-video" preload="metadata" muted>
-                  <source src="images/Westside ABA _ Autism & Behavior Therapy - Google Chrome 2024-11-14 06-16-59.mp4" type="video/mp4">
+                  <source src="images/Westside ABA _ Autism & Behavior Therapy - Google Chrome 2024-11-14 10-51-29.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
@@ -573,7 +567,7 @@
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
-                <img src="images/logo.jpg" alt="The Taw-Ally Place School" class="project-image">
+                <img src="images/creative-sparx.png" alt="The Taw-Ally Place School" class="project-image">
                 <video class="project-video" preload="metadata" muted>
                   <source src="images/vid2.mp4" type="video/mp4">
                   Your browser does not support the video tag.
@@ -593,90 +587,7 @@
           </div>
         </li>
       </div>
-      <li class="portfolio-item2 content animated-element" data-id="id-3" data-type="cat-item-1">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p3.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p3.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Pineapple</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-4" data-type="cat-item-3">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p4.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p4.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Cup of tea</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-5" data-type="cat-item-4">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p5.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p5.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Icecream</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-7" data-type="cat-item-3">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p6.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p6.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Red berries</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-4" data-type="cat-item-3">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p7.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p7.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Orange</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-5" data-type="cat-item-4">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p8.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p8.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Black berries</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
-      <li class="portfolio-item2 content animated-element" data-id="id-7" data-type="cat-item-3">
-        <span class="image-block">
-          <a class="image-zoom" href="images/p9.jpg" data-gal="prettyPhoto[gallery]">
-            <div class="content-overlay"></div>
-            <img src="images/p9.jpg" class="img-fluid w3layouts agileits" alt="portfolio-img">
-            <div class="content-details fadeIn-bottom">
-              <h3 class="content-title">Orange mike</h3>
-              <p class="content-text">This is a short description</p>
-            </div>
-          </a>
-        </span>
-      </li>
+
     </ul>
     <!--end portfolio-area -->
   </div>
