@@ -148,7 +148,7 @@
       /* Add padding around the inner project card */
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       /* For hover effect */
-      border: 1px solid #ddd;
+      border: 2px solid #ddd;
       border-radius: 0;
       opacity: 0;
       /* Initially hidden for animation */
@@ -166,7 +166,7 @@
 
     /* Hover Effect for Outer Card */
     .outer-card:hover {
-      border: 1px solid #ffc200;
+      border: 2px solid #ffc200;
       border-radius: 0;
     }
 
@@ -281,6 +281,128 @@
       font-size: 0.9rem;
       margin-right: 5px;
     }
+    .media-container {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Same as the image */
+    overflow: hidden;
+}
+
+.media-container {
+    position: relative;
+    width: 100%;
+    height: 220px; /* Same as the image */
+    overflow: hidden;
+}
+
+.project-image,
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.project-image {
+    transform: scale(1) rotate(0deg);
+}
+
+.project-video {
+    opacity: 0;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+.media-container:hover .project-image {
+    opacity: 0;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.media-container:hover .project-video {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Base styling for the project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Styling for individual project cards */
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.media-container {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image, .project-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .media-container {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  .media-container {
+    height: 200px;
+  }
+  .project-content {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .media-container {
+    height: 150px;
+  }
+  .project-content {
+    padding: 10px;
+  }
+}
 
     /* General animation styling */
     .animated-element {
@@ -377,7 +499,7 @@
 <!-- portfolio breadcrumb -->
 
 <!-- portfolio -->
-<section class="w3-gallery py-5 animated-element">
+<section class="w3-gallery py-5 ">
   <div class="container py-lg-5">
     <ul class="portfolio-categ filter text-center mb-4 p-0">
       <li class="port-filter all active">
@@ -397,12 +519,18 @@
       </li>
     </ul>
 
-    <ul class="portfolio-area clearfix p-0 m-0">
+    <ul class="portfolio-area clearfix p-0 m-0 ">
       <div class="project-grid">
         <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
-          <div class="outer-card">
+          <div class="outer-card animated-element">
             <div class="project-card">
-              <img src="images/blog1.jpg" alt="The Taw-Ally Place School">
+              <div class="media-container">
+                <img src="images/blog1.jpg" alt="The Taw-Ally Place School" class="project-image">
+                <video class="project-video" preload="metadata" muted>
+                  <source src="images/vid2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
               <div class="project-content">
                 <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host
                     Expired</span></h2>
@@ -413,16 +541,23 @@
                 </div>
                 <p class="project-description">Empowering young minds with quality education tailored for academic and
                   personal excellence.</p>
-                <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website <i
+                <a href="thetaw-allyplaceschool.com" class="visit-link">Visit Website  <i
                     class="fas fa-arrow-up"></i></a>
               </div>
             </div>
           </div>
         </li>
         <li class="portfolio-item2 content" data-id="id-2" data-type="cat-item-2">
-          <div class="outer-card">
+          <div class="outer-card animated-element">
             <div class="project-card">
-              <img src="images/bg.jpg" alt="Westside ABA">
+              <div class="media-container">
+                <img src="images/bg.jpg" alt="Westside ABA" class="project-image">
+                <video class="project-video" preload="metadata" muted>
+                  <source src="images/Westside ABA _ Autism & Behavior Therapy - Google Chrome 2024-11-14 06-16-59.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
               <div class="project-content">
                 <h2 class="project-title">Westside ABA</h2>
                 <div class="project-tags">
@@ -431,15 +566,21 @@
                 </div>
                 <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve
                   the quality of life for individuals and families.</p>
-                <a href="#" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
+                <a href="#" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
               </div>
             </div>
           </div>
         </li>
         <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-2">
-          <div class="outer-card">
+          <div class="outer-card animated-element">
             <div class="project-card">
-              <img src="images/myphoto.jpg" alt="Creative Sparx Studio">
+              <div class="media-container">
+                <img src="images/myphoto.jpg" alt="The Taw-Ally Place School" class="project-image">
+                <video class="project-video" preload="metadata" muted>
+                  <source src="images/vid2.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
               <div class="project-content">
                 <h2 class="project-title">Creative Sparx Studio</h2>
                 <div class="project-tags">
@@ -448,13 +589,13 @@
                 </div>
                 <p class="project-description">Transforming ideas into stunning visual and interactive experiences
                   through cutting-edge design.</p>
-                <a href="www.creativesparx.com.ng" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
+                <a href="www.creativesparx.com.ng" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
               </div>
             </div>
           </div>
         </li>
       </div>
-      <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-1">
+      <li class="portfolio-item2 content animated-element" data-id="id-3" data-type="cat-item-1">
         <span class="image-block">
           <a class="image-zoom" href="images/p3.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -466,7 +607,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
+      <li class="portfolio-item2 content animated-element" data-id="id-4" data-type="cat-item-3">
         <span class="image-block">
           <a class="image-zoom" href="images/p4.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -478,7 +619,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
+      <li class="portfolio-item2 content animated-element" data-id="id-5" data-type="cat-item-4">
         <span class="image-block">
           <a class="image-zoom" href="images/p5.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -490,7 +631,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
+      <li class="portfolio-item2 content animated-element" data-id="id-7" data-type="cat-item-3">
         <span class="image-block">
           <a class="image-zoom" href="images/p6.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -502,7 +643,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-4" data-type="cat-item-3">
+      <li class="portfolio-item2 content animated-element" data-id="id-4" data-type="cat-item-3">
         <span class="image-block">
           <a class="image-zoom" href="images/p7.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -514,7 +655,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-5" data-type="cat-item-4">
+      <li class="portfolio-item2 content animated-element" data-id="id-5" data-type="cat-item-4">
         <span class="image-block">
           <a class="image-zoom" href="images/p8.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -526,7 +667,7 @@
           </a>
         </span>
       </li>
-      <li class="portfolio-item2 content" data-id="id-7" data-type="cat-item-3">
+      <li class="portfolio-item2 content animated-element" data-id="id-7" data-type="cat-item-3">
         <span class="image-block">
           <a class="image-zoom" href="images/p9.jpg" data-gal="prettyPhoto[gallery]">
             <div class="content-overlay"></div>
@@ -766,7 +907,25 @@
   })
 </script>
 <!-- //script for blog post slider -->
+<script>
+  document.querySelectorAll('.project-card').forEach(card => {
+    const video = card.querySelector('.project-video');
+    
+    card.addEventListener('mouseenter', () => {
+        if (video) {
+            video.play();
+        }
+    });
 
+    card.addEventListener('mouseleave', () => {
+        if (video) {
+            video.pause();
+            video.currentTime = 0; // Reset video to the start
+        }
+    });
+});
+
+</script>
 <!-- script for tesimonials carousel slider -->
 <script>
   $(document).ready(function () {
@@ -851,25 +1010,7 @@
   });
 </script>
 <!-- disable body scroll which navbar is in active -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll('.outer-card');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Stop observing once the animation is triggered
-        }
-      });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => {
-      observer.observe(card);
-    });
-  });
-
-</script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const elements = document.querySelectorAll('.animated-element');
