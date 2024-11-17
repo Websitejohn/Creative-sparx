@@ -276,6 +276,13 @@
       margin-top: 15px;
       /* Reduce top margin */
     }
+    html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow: auto; /* Allow scrolling */
+}
+
   </style>
 
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
@@ -367,8 +374,9 @@
           <div class="img-effect text-lg-center">
             <!-- Lottie animation for the hero section -->
             <dotlottie-player src="https://lottie.host/f6d81114-2d79-4f49-8f52-86b468530962/n7jrCjUVlW.json"
-              background="transparent" speed="1" style="width: 300px; height: 300px; margin-left: 20px;" loop autoplay>
-            </dotlottie-player>
+            background="transparent" speed="1" style="width: 100%; height: auto;" loop autoplay>
+          </dotlottie-player>
+          
           </div>
         </div>
       </div>
