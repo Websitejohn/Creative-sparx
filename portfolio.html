@@ -134,6 +134,14 @@
   }
   </script>
   <style>
+body {
+      margin: 0;
+      overflow: hidden; /* Ensures the background takes up the full screen */
+    }
+    canvas {
+      display: block;
+    }
+
     /* General Container Styling */
     .container {
       width: 100%;
@@ -962,6 +970,82 @@
 <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8ce6dbab39e6b772',t:'MTcyODIzMDM2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 <iframe height="1" width="1"
   style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+<script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.152.0/examples/jsm/loaders/GLTFLoader.js';
+
+    let scene, camera, renderer, model;
+
+    init();
+    animate();
+
+    function init() {
+      // Scene setup
+      scene = new THREE.Scene();
+
+      // Perspective Camera
+      const fov = 75;
+      const aspect = window.innerWidth / window.innerHeight;
+      const near = 0.1;
+      const far = 1000;
+      camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+      camera.position.z = 5;
+
+      // Renderer setup
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Light setup
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+      scene.add(ambientLight);
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+      directionalLight.position.set(5, 5, 5).normalize();
+      scene.add(directionalLight);
+
+      // Load 3D Model (Laptop example)
+      const loader = new GLTFLoader();
+      loader.load(
+        'https://modelviewer.dev/shared-assets/models/Chromebook.glb', // Example 3D laptop model
+        (gltf) => {
+          model = gltf.scene;
+          model.scale.set(1.5, 1.5, 1.5); // Adjust the size of the model
+          model.position.set(0, -1, 0); // Center the model
+          scene.add(model);
+        },
+        undefined,
+        (error) => {
+          console.error('An error occurred while loading the model:', error);
+        }
+      );
+
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      // Mouse interaction
+      document.addEventListener('mousemove', onMouseMove);
+    }
+
+    function onMouseMove(event) {
+      const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+      const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+      if (model) {
+        model.rotation.y = mouseX * Math.PI; // Rotate the model horizontally
+        model.rotation.x = mouseY * Math.PI / 4; // Rotate the model vertically
+      }
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      renderer.render(scene, camera);
+    }
+  </script>
 
 </body>
 
