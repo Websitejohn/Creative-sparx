@@ -11781,13 +11781,13 @@ span.image-block {
   margin: 1em;
   margin-left: 0;
   margin-right: 2em;
-  border-radius: var(--border-radius); }
+  }
 
 .home-portfolio-text {
   margin-top: 10px; }
 
 .portfolio-categ li.active a {
-  color: var(--primary-color); }
+  color:  }
 
 @media (max-width: 1080px) {
   .portfolio-area li {
