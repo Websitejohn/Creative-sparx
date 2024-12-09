@@ -1,14 +1,7 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
---*/
+
+
 @charset "UTF-8";
-/*!
- * Bootstrap v4.4.1 (https://getbootstrap.com/)
- * Copyright 2011-2019 The Bootstrap Authors
- * Copyright 2011-2019 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- */
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -3072,7 +3065,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #8e43e7; }
+  background-color: #ff9501; }
 
 .nav-fill .nav-item {
   flex: 1 1 auto;
@@ -11196,11 +11189,6 @@ span.cursor {
   .owl-carousel .owl-nav.disabled {
     display: none; } }
 
-/**
-  * Owl Carousel v2.3.4
-  * Copyright 2013-2018 David Deutsch
-  * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
-  */
 .owl-theme .owl-dots,
 .owl-theme .owl-nav {
   text-align: center;
@@ -11781,7 +11769,7 @@ span.image-block {
   margin: 1em;
   margin-left: 0;
   margin-right: 2em;
-  border-radius: var(--border-radius); }
+}
 
 .home-portfolio-text {
   margin-top: 10px; }
