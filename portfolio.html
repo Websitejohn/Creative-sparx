@@ -29,10 +29,6 @@
     content="Creative Sparx Studio specializes in web and graphic design services to make your brand stand out online." />
   <meta name="twitter:image" content="https://www.creativesparx.com.ng/images/creativesparx-banner.jpg" />
 
-
-  <!-- Include Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
@@ -138,7 +134,6 @@
   }
   </script>
   <style>
-
     /* General Container Styling */
     .container {
       width: 100%;
@@ -205,6 +200,10 @@
       border-radius: 0;
     }
 
+    .project-card:hover {
+      transition: transform 0.3s ease;
+    }
+
     /* Image Styling */
     .project-card img {
       width: 100%;
@@ -237,7 +236,6 @@
       padding: 5px 10px;
       font-size: 0.9rem;
       margin-right: 5px;
-      margin-left: 10px;
     }
 
     .project-description {
@@ -271,120 +269,129 @@
       font-size: 0.9rem;
       margin-right: 5px;
     }
+
     .media-container {
-    position: relative;
-    width: 100%;
-    height: 220px; /* Same as the image */
-    overflow: hidden;
-}
+      position: relative;
+      width: 100%;
+      height: 220px;
+      /* Same as the image */
+      overflow: hidden;
+    }
 
-.media-container {
-    position: relative;
-    width: 100%;
-    height: 220px; /* Same as the image */
-    overflow: hidden;
-}
+    .media-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      /* Same as the image */
+      overflow: hidden;
+    }
 
-.project-image,
-.project-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease-in-out, transform 0.6s ease-in-out;
-}
+    .project-image,
+    .project-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s ease-in-out, transform 0.6s ease-in-out;
+    }
 
-.project-image {
-    transform: scale(1) rotate(0deg);
-}
+    .project-image {
+      transform: scale(1) rotate(0deg);
+    }
 
-.project-video {
-    opacity: 0;
-    transform: scale(1.1) rotate(-5deg);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
-    pointer-events: none;
-}
+    .project-video {
+      opacity: 0;
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+      pointer-events: none;
+    }
 
-.media-container:hover .project-image {
-    opacity: 0;
-    transform: scale(1.1) rotate(5deg);
-}
+    .media-container:hover .project-image {
+      opacity: 0;
+      transform: scale(1.1) rotate(5deg);
+    }
 
-.media-container:hover .project-video {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
+    .media-container:hover .project-video {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
 
-/* Base styling for the project grid */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+    /* Base styling for the project grid */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-/* Styling for individual project cards */
-.project-card {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+    /* Styling for individual project cards */
+    .project-card {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
 
-.media-container {
-  width: 100%;
-  height: 220px;
-  position: relative;
-  overflow: hidden;
-}
+    .media-container {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
 
-.project-image, .project-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .project-image,
+    .project-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.project-content {
-  padding: 15px;
-}
+    .project-content {
+      padding: 15px;
+    }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .media-container {
-    height: 220px;
-  }
-}
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-  .project-card {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-  .media-container {
-    height: 200px;
-  }
-  .project-content {
-    padding: 12px;
-  }
-}
+      .media-container {
+        height: 220px;
+      }
+    }
 
-@media (max-width: 480px) {
-  .media-container {
-    height: 150px;
-  }
-  .project-content {
-    padding: 10px;
-  }
-}
+    @media (max-width: 768px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        margin: 0 auto;
+        max-width: 90%;
+      }
+
+      .media-container {
+        height: 200px;
+      }
+
+      .project-content {
+        padding: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .media-container {
+        height: 150px;
+      }
+
+      .project-content {
+        padding: 10px;
+      }
+    }
 
     /* General animation styling */
     .animated-element {
@@ -398,6 +405,45 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .project-feedback {
+      background-color: #f9f9f9;
+      /* Light background for contrast */
+      border-left: 4px solid #ff9c00;
+      /* Accent border */
+      padding: 15px;
+      /* Padding for spacing */
+      margin-top: 10px;
+      /* Space between project and feedback */
+      border-radius: 5px;
+      /* Rounded corners */
+      font-style: italic;
+      /* Italic text for emphasis */
+      color: #333;
+      /* Dark text color for readability */
+      margin-bottom: 20px;
+    }
+
+    .project-feedback p {
+      margin: 0;
+      /* Remove default margin */
+      line-height: 1.5;
+      /* Improve readability */
+    }
+
+    /* Optional: Add a hover effect */
+    .project-feedback:hover {
+      background-color: #f0f0f0;
+      /* Slightly darker background on hover */
+      transition: background-color 0.3s ease;
+      /* Smooth transition */
+    }
+    .star-rating {
+    color: #ff9c00; /* Gold color for stars */
+    font-size: 1.2em; /* Increase size for visibility */
+}
+
+
   </style>
 </head>
 
@@ -484,71 +530,71 @@
 <section class="w3-gallery py-5">
   <div class="container py-lg-5">
     <ul class="portfolio-categ filter text-center mb-4 p-0">
-      <li class="port-filter all active">
-        <a href="#">Show All</a>
-      </li>
-      <li class="cat-item-1">
-        <a href="#" title="Category 1">Architecture</a>
-      </li>
-      <li class="cat-item-2">
-        <a href="#" title="Category 2">Web Design</a>
-      </li>
-      <li class="cat-item-3">
-        <a href="#" title="Category 3">Creative</a>
-      </li>
-      <li class="cat-item-4">
-        <a href="#" title="Category 4">Portfolio</a>
-      </li>
-    </ul>
-
+      <li class="port-filter all active"><a href="#">Show All</a></li>
+      <li class="cat-item-1"><a href="#" title="Category 1">Architecture</a></li>
+      <li class="cat-item-2"><a href="#" title="Category 2">Web Design</a></li>
+      <li class="cat-item-3"><a href="#" title="Category 3">Creative</a></li>
+      <li class="cat-item-4"><a href="#" title="Category 4">Portfolio</a></li>
+  </ul>
     <ul class="clearfix ">
       <div class="project-grid">
-        <li class="portfolio-item2 content" data-id="id-1" data-type="cat-item-2">
+        <li class="portfolio-item2 content cat-item-2">
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
                 <img src="images/taw-ally.png" alt="The Taw-Ally Place School" class="project-image">
                 <video class="project-video" preload="metadata" muted>
-                  <source src="images/The Taw-Ally Place School-Home - Google Chrome 2024-11-14 11-03-03.mp4" type="video/mp4">
+                  <source src="images/The Taw-Ally Place School-Home - Google Chrome 2024-11-14 11-03-03.mp4"
+                    type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
               <div class="project-content">
                 <h2 class="project-title">The Taw-Ally Place School <span class="project-status-label">Host
-                    Expired</span> <span class="project-tag">Education</span>
-                    <span class="project-tag">New</span></h2>
+                    Expired</span> </h2>
+                <span class="project-tag" onclick="filterByTag('Education')">Education</span>
+                <span class="project-tag">New</span>
+
 
                 <p class="project-description">Empowering young minds with quality education tailored for academic and
                   personal excellence.</p>
-                <a href="https://thetaw-allyplaceschool.com/index.html" class="visit-link">Visit Website  <i
+                <div class="project-feedback">
+                  <p>"The Taw-Ally Place School project exceeded our expectations!" - Client Name <span class="star-rating">
+                    ★★★★☆ <!-- Use JavaScript to dynamically fill stars based on rating -->
+                </span></p>
+                </div>
+                <a href="https://thetaw-allyplaceschool.com/index.html" class="visit-link">Visit Website <i
                     class="fas fa-arrow-up"></i></a>
+
               </div>
             </div>
           </div>
         </li>
-        <li class="portfolio-item2 content" data-id="id-2" data-type="cat-item-2">
+        <li class="portfolio-item2 content cat-item-2">
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
                 <img src="images/wst.png" alt="Westside ABA" class="project-image">
                 <video class="project-video" preload="metadata" muted>
-                  <source src="images/Westside ABA _ Autism & Behavior Therapy - Google Chrome 2024-11-14 10-51-29.mp4" type="video/mp4">
+                  <source src="images/Westside ABA _ Autism & Behavior Therapy - Google Chrome 2024-11-14 10-51-29.mp4"
+                    type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              
+
               <div class="project-content">
-                <h2 class="project-title">Westside ABA <span class="project-tag">Therapy</span>
-                  <span class="project-tag">Behavioral</span></h2>
-                
+                <h2 class="project-title">Westside ABA </h2><span class="project-tag">Therapy</span>
+                <span class="project-tag">Behavioral</span>
+
+
                 <p class="project-description">Providing specialized behavioral therapy solutions tailored to improve
                   the quality of life for individuals and families.</p>
-                <a href="#" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
+                <a href="#" class="visit-link">Visit Website <i class="fas fa-arrow-up"></i></a>
               </div>
             </div>
           </div>
         </li>
-        <li class="portfolio-item2 content" data-id="id-3" data-type="cat-item-2">
+        <li class="portfolio-item2 content cat-item-2">
           <div class="outer-card animated-element">
             <div class="project-card">
               <div class="media-container">
@@ -566,7 +612,8 @@
                 </div>
                 <p class="project-description">Transforming ideas into stunning visual and interactive experiences
                   through cutting-edge design.</p>
-                <a href="https://www.creativesparx.com.ng/index.html" class="visit-link">Visit Website  <i class="fas fa-arrow-up"></i></a>
+                <a href="https://www.creativesparx.com.ng/index.html" class="visit-link">Visit Website <i
+                    class="fas fa-arrow-up"></i></a>
               </div>
             </div>
           </div>
@@ -652,6 +699,23 @@
   <button onclick="topFunction()" id="movetop" title="Go to top">
     <span class="fa fa-angle-up"></span>
   </button>
+
+  <script>
+    document.querySelectorAll('.portfolio-categ li').forEach(item => {
+      item.addEventListener('click', function () {
+        const filterClass = this.classList[1];
+        document.querySelectorAll('.portfolio-item2').forEach(portfolioItem => {
+          if (filterClass === 'all' || portfolioItem.classList.contains(filterClass)) {
+            portfolioItem.style.display = 'block';
+          } else {
+            portfolioItem.style.display = 'none';
+          }
+        });
+        document.querySelectorAll('.portfolio-categ li').forEach(li => li.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
   <script>
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {
@@ -804,20 +868,20 @@
 <script>
   document.querySelectorAll('.project-card').forEach(card => {
     const video = card.querySelector('.project-video');
-    
+
     card.addEventListener('mouseenter', () => {
-        if (video) {
-            video.play();
-        }
+      if (video) {
+        video.play();
+      }
     });
 
     card.addEventListener('mouseleave', () => {
-        if (video) {
-            video.pause();
-            video.currentTime = 0; // Reset video to the start
-        }
+      if (video) {
+        video.pause();
+        video.currentTime = 0; // Reset video to the start
+      }
     });
-});
+  });
 
 </script>
 <!-- script for tesimonials carousel slider -->
@@ -967,7 +1031,6 @@
 <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'8ce6dbab39e6b772',t:'MTcyODIzMDM2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 <iframe height="1" width="1"
   style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
-
 
 </body>
 
