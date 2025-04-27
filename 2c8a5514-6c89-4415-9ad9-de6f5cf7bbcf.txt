@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Sparx - Digital Agency</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF9C00',secondary:'#1A1A1A'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+/* .preloader {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #0E0E0E;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+}
+.preloader-content {
+text-align: center;
+}
+.preloader-logo {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+opacity: 0;
+transform: translateY(20px);
+animation: fadeInUp 0.6s ease forwards;
+}
+.preloader-bar {
+width: 200px;
+height: 2px;
+background: rgba(255, 156, 0, 0.2);
+border-radius: 2px;
+overflow: hidden;
+}
+.preloader-progress {
+width: 0;
+height: 100%;
+background: #FF9C00;
+animation: progress 0.8s ease forwards;
+}
+@keyframes progress {
+0% { width: 0; }
+100% { width: 100%; }
+} */
+.ticker {
+overflow: hidden;
+white-space: nowrap;
+position: relative;
+}
+.ticker-content {
+display: inline-block;
+animation: ticker 20s linear infinite;
+}
+@keyframes ticker {
+0% { transform: translateX(0); }
+100% { transform: translateX(-50%); }
+}
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #0E0E0E;
+color: #FFFFFF;
+cursor: none;
+overflow-x: hidden;
+}
+.mobile-menu {
+position: fixed;
+top: 0;
+right: -100%;
+width: 100%;
+height: 100vh;
+background: #0E0E0E;
+z-index: 40;
+transition: 0.5s ease;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.mobile-menu.active {
+right: 0;
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+@keyframes fadeInUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+@keyframes scaleIn {
+from {
+opacity: 0;
+transform: scale(0.9);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+@keyframes slideInLeft {
+from {
+opacity: 0;
+transform: translateX(-20px);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+.process-card {
+transform-style: preserve-3d;
+transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.process-card:hover {
+transform: translateY(-10px) rotateX(10deg);
+}
+.process-card::after {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(45deg, transparent, rgba(161, 255, 10, 0.1));
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+.process-card:hover::after {
+opacity: 1;
+}
+.animate-fadeInUp {
+animation: fadeInUp 0.6s ease forwards;
+}
+.animate-scaleIn {
+animation: scaleIn 0.6s ease forwards;
+}
+.animate-slideInLeft {
+animation: slideInLeft 0.6s ease forwards;
+}
+.hover-lift {
+transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.hover-lift:hover {
+transform: translateY(-5px);
+}
+.nav-link::before {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #A1FF0A;
+transform-origin: center;
+transition: transform 0.3s ease;
+}
+.nav-link:hover::before {
+transform: scaleX(1);
+}
+.custom-cursor {
+width: 20px;
+height: 20px;
+background: #A1FF0A;
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 99999;
+transition: transform 0.2s ease;
+mix-blend-mode: difference;
+transform: translate(-50%, -50%);
+}
+.custom-cursor-follower {
+width: 40px;
+height: 40px;
+background: rgba(161, 255, 10, 0.2);
+border-radius: 50%;
+position: fixed;
+pointer-events: none;
+z-index: 99998;
+transition: transform 0.4s ease;
+transform: translate(-50%, -50%);
+}
+.hover-scale {
+transition: transform 0.3s ease;
+}
+.hover-scale:hover {
+transform: scale(1.02);
+}
+.fade-up {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+opacity: 1;
+transform: translateY(0);
+}
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+100% { transform: translateY(0px); }
+}
+.float-animation {
+animation: float 4s ease-in-out infinite;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #A1FF0A;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+width: 100%;
+}
+.hero-bg {
+background-image: url('https://readdy.ai/api/search-image?query=modern%2520digital%2520agency%2520workspace%2520with%2520dark%2520atmosphere%2C%2520subtle%2520lighting%2C%2520gradient%2520from%2520dark%2520to%2520black%2520on%2520the%2520left%2520side%2520to%2520create%2520space%2520for%2520text%2C%2520high-end%2520technology%2520elements%2C%2520minimal%2520aesthetic%2C%2520no%2520people%2C%2520professional%2520environment%2C%2520cinematic%2520lighting&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center right;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(14,14,14,1) 0%, rgba(14,14,14,0.9) 50%, rgba(14,14,14,0.7) 100%);
+}
+.service-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 25px -5px rgba(161, 255, 10, 0.1), 0 10px 10px -5px rgba(161, 255, 10, 0.04);
+}
+.work-item {
+position: relative;
+isolation: isolate;
+}
+.work-item::after {
+content: '';
+position: absolute;
+inset: 0;
+background: linear-gradient(45deg, rgba(255, 156, 0, 0.1), transparent);
+opacity: 0;
+transition: opacity 0.5s ease;
+mix-blend-mode: overlay;
+}
+.work-item:hover::after {
+opacity: 1;
+}
+.work-item img {
+transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.work-item:hover img {
+transform: scale(1.1);
+}
+.pricing-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(161, 255, 10, 0.1), 0 10px 10px -5px rgba(161, 255, 10, 0.04);
+}
+.accordion-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+.accordion-content.active {
+max-height: 500px;
+}
+.vertical-text {
+writing-mode: vertical-rl;
+text-orientation: mixed;
+transform: rotate(180deg);
+}
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #A1FF0A;
+border-radius: 4px;
+background-color: transparent;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+input[type="checkbox"]:checked::before {
+content: '';
+width: 10px;
+height: 10px;
+background-color: #A1FF0A;
+border-radius: 2px;
+}
+</style>
+</head>
+<body>
+<div class="custom-cursor" style="z-index: 9999;"></div>
+<div class="custom-cursor-follower" style="z-index: 9998;"></div>
+<div id="noise-overlay" class="fixed inset-0 pointer-events-none z-50 opacity-[0.015]"></div>
+<style>
+#noise-overlay {
+background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVfJ/YAAAACHRSTlMzMzMzMzMzM85JBgUAAAABYktHRAH/Ai3eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAARklEQVQ4y2NgQAX8DKiBAQPjGiSxVccahBiwgFXHGhgYsQABrIYwYjUEq9sx4XQ7VkOYcBrCiNMQRpyGMOJ0O1ZDmHAZAgDQZAYsl2yZ2AAAAABJRU5ErkJggg==');
+animation: noise 0.5s steps(2) infinite;
+}
+@keyframes noise {
+0% { transform: translate(0, 0); }
+10% { transform: translate(-5%, -5%); }
+20% { transform: translate(-10%, 5%); }
+30% { transform: translate(5%, -10%); }
+40% { transform: translate(-5%, 15%); }
+50% { transform: translate(-10%, 5%); }
+60% { transform: translate(15%, 0); }
+70% { transform: translate(0, 10%); }
+80% { transform: translate(-15%, 0); }
+90% { transform: translate(10%, 5%); }
+100% { transform: translate(5%, 0); }
+}
+</style>
+<!-- Header -->
+<header class="fixed w-full z-50 transition-all duration-300" id="main-header">
+<div class="container mx-auto px-6 py-6 flex justify-between items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-white hover:text-primary transition-all duration-300 transform hover:scale-105">logo</a>
+<nav class="hidden md:flex items-center space-x-12">
+<a href="#work" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Work</a>
+<a href="#services" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Services</a>
+<a href="#process" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Process</a>
+<a href="#pricing" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Pricing</a>
+<a href="#about" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">About</a>
+<a href="#courses" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Courses</a>
+<a href="#blog" class="nav-link text-sm uppercase tracking-widest text-gray-300 hover:text-primary transition-all duration-300 relative overflow-hidden group">Blog</a>
+</nav>
+<a href="#contact" class="hidden md:flex items-center px-8 py-3 bg-transparent border-2 border-primary text-primary font-semibold rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button text-sm uppercase tracking-widest">Let's Talk</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-white ri-xl"></i>
+</button>
+</div>
+</header>
+<!-- Preloader -->
+<!-- <div class="preloader">
+<div class="preloader-content">
+<div class="preloader-logo font-['Pacifico']">Creative Sparx</div>
+<div class="preloader-bar">
+<div class="preloader-progress"></div>
+</div>
+</div>
+</div> -->
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+<nav class="flex flex-col items-center space-y-8">
+<a href="#work" class="text-2xl text-gray-300 hover:text-primary transition-colors">Work</a>
+<a href="#services" class="text-2xl text-gray-300 hover:text-primary transition-colors">Services</a>
+<a href="#process" class="text-2xl text-gray-300 hover:text-primary transition-colors">Process</a>
+<a href="#pricing" class="text-2xl text-gray-300 hover:text-primary transition-colors">Pricing</a>
+<a href="#about" class="text-2xl text-gray-300 hover:text-primary transition-colors">About</a>
+<a href="#contact" class="px-8 py-3 bg-primary text-black font-semibold rounded-button">Let's Talk</a>
+</nav>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+<div class="absolute inset-0 w-full h-full">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20workspace%20with%20dark%20atmosphere%20and%20subtle%20lighting%2C%20gradient%20dark%20to%20transparent%2C%20clean%20aesthetic%2C%20professional%20environment%2C%20high-end%20technology%20elements%2C%20cinematic%20mood%2C%20ultra%20wide%20shot&width=1920&height=1080&seq=10&orientation=landscape" class="absolute w-full h-full object-cover object-center" alt="Hero Background">
+</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+<div class="max-w-4xl">
+<div class="space-y-6">
+<div class="flex items-center space-x-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm sm:text-base uppercase tracking-[0.2em] text-primary/80">Digital Innovation Studio</p>
+</div>
+<div class="space-y-6">
+<h1 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight">
+<span class="block mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/80">Crafting Digital</span>
+<span class="typewriter-text relative inline-block text-primary"></span>
+</h1>
+<p class="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed">We transform ideas into exceptional digital experiences through innovative web design, app development, and strategic branding solutions.</p>
+</div>
+<div class="mt-12 space-y-8">
+<div class="flex flex-wrap gap-4 sm:gap-6">
+<a href="#contact" class="group relative px-8 py-4 bg-primary text-black font-semibold rounded-button overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 whitespace-nowrap !rounded-button uppercase tracking-wider text-sm">
+<span class="relative z-10">Start a Project</span>
+<div class="absolute inset-0 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+</a>
+<a href="#work" class="group relative px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-button overflow-hidden transition-all duration-300 hover:border-primary hover:text-primary whitespace-nowrap !rounded-button uppercase tracking-wider text-sm">
+View Our Work
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+</a>
+</div>
+<div class="flex items-center space-x-4 pt-12">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm uppercase tracking-widest text-gray-400 animate-pulse">Scroll to Explore</p>
+</div>
+<div class="mt-16 sm:mt-24">
+<p class="text-sm sm:text-base text-gray-400 mb-6">Trusted by industry leaders</p>
+<div class="grid grid-cols-3 sm:grid-cols-5 gap-8 items-center">
+<div class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-lg transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+<i class="ri-google-fill ri-2x opacity-70 group-hover:opacity-100 transition-all duration-300"></i>
+</div>
+<div class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-lg transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+<i class="ri-microsoft-fill ri-2x opacity-70 group-hover:opacity-100 transition-all duration-300"></i>
+</div>
+<div class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-lg transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+<i class="ri-amazon-fill ri-2x opacity-70 group-hover:opacity-100 transition-all duration-300"></i>
+</div>
+<div class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-lg transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+<i class="ri-netflix-fill ri-2x opacity-70 group-hover:opacity-100 transition-all duration-300"></i>
+</div>
+<div class="group relative flex items-center justify-center">
+<div class="absolute inset-0 bg-primary/5 rounded-lg transform scale-0 group-hover:scale-100 transition-transform duration-300"></div>
+<i class="ri-spotify-fill ri-2x opacity-70 group-hover:opacity-100 transition-all duration-300"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Work Showcase -->
+<section id="work" class="py-32 bg-black">
+<div class="container mx-auto px-6">
+<div class="mb-24 max-w-3xl">
+<div class="flex items-center space-x-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm uppercase tracking-[0.2em] text-primary/80">Our Portfolio</p>
+</div>
+<h2 class="text-6xl font-bold mb-6 leading-tight">Selected <span class="text-primary">works</span> we're proud of</h2>
+<p class="text-xl text-gray-400 mb-8">Explore our portfolio of award-winning projects that showcase our expertise in digital transformation.</p>
+<div class="flex flex-wrap gap-4" id="portfolio-filters">
+<button class="filter-btn active px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-primary text-black hover:bg-primary/90" data-filter="all">All Projects</button>
+<button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-white hover:bg-primary hover:text-black" data-filter="web">Web Design</button>
+<button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-white hover:bg-primary hover:text-black" data-filter="app">Mobile Apps</button>
+<button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-white hover:bg-primary hover:text-black" data-filter="ecommerce">E-commerce</button>
+<button class="filter-btn px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 bg-gray-800 text-white hover:bg-primary hover:text-black" data-filter="branding">Branding</button>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-6 mb-12" id="portfolio-grid">
+<div class="col-span-12 md:col-span-8 portfolio-item" data-category="web">
+<div class="work-item group relative overflow-hidden rounded-lg bg-gray-900/50 backdrop-blur-sm h-[500px] transition-all duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20tech%20company%20website%20design%20with%20dark%20theme%20and%20subtle%20orange%20accents%2C%20professional%20UI%20design%2C%20clean%20layout%2C%20high-end%203D%20elements%2C%20cinematic%20lighting%2C%20ultra%20wide%20shot&width=1200&height=800&seq=11&orientation=landscape" alt="Tech Company Website" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+<div class="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+<div class="flex items-center space-x-2 mb-4">
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-medium">Web Design</span>
+<span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full font-medium">UX/UI</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">NOVA TECH</h3>
+<p class="text-gray-300 mb-6 max-w-2xl transform transition-all duration-500 opacity-0 group-hover:opacity-100">Complete website redesign focusing on user experience and conversion optimization, resulting in a 150% increase in user engagement.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary font-medium group/link">
+<span>View Case Study</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 portfolio-item" data-category="app">
+<div class="work-item group relative overflow-hidden rounded-lg bg-gray-900/50 backdrop-blur-sm h-[500px] transition-all duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20fitness%20mobile%20app%20interface%20with%20dark%20theme%20and%20orange%20accents%2C%20health%20tracking%20dashboard%2C%20professional%20UI%20design%2C%20clean%20layout%2C%20high-end%203D%20visualization&width=600&height=800&seq=12&orientation=portrait" alt="Fitness App" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+<div class="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+<div class="flex items-center space-x-2 mb-4">
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-medium">Mobile App</span>
+<span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full font-medium">iOS & Android</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">FitSync</h3>
+<p class="text-gray-300 mb-6 transform transition-all duration-500 opacity-0 group-hover:opacity-100">Revolutionary fitness tracking app with AI-powered workout recommendations and social features.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary font-medium group/link">
+<span>View Case Study</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 portfolio-item" data-category="ecommerce">
+<div class="work-item group relative overflow-hidden rounded-lg bg-gray-900/50 backdrop-blur-sm h-[400px] transition-all duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=luxury%20fashion%20e-commerce%20website%20with%20dark%20theme%20and%20orange%20accents%2C%20premium%20product%20showcase%2C%20professional%20UI%20design%2C%20minimalist%20layout%2C%20high-end%20product%20photography&width=800&height=600&seq=13&orientation=landscape" alt="E-commerce Website" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+<div class="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+<div class="flex items-center space-x-2 mb-4">
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-medium">E-commerce</span>
+<span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full font-medium">Shopify</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Luxe Collective</h3>
+<p class="text-gray-300 mb-6 transform transition-all duration-500 opacity-0 group-hover:opacity-100">Premium fashion e-commerce platform with immersive shopping experience.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary font-medium group/link">
+<span>View Case Study</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 portfolio-item" data-category="ecommerce">
+<div class="work-item group relative overflow-hidden rounded-lg bg-gray-900/50 backdrop-blur-sm h-[400px] transition-all duration-500 hover:scale-[1.02]">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80 z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20SaaS%20dashboard%20interface%20with%20dark%20theme%20and%20orange%20accents%2C%20data%20visualization%2C%20analytics%20dashboard%2C%20professional%20UI%20design%2C%20clean%20layout&width=800&height=600&seq=14&orientation=landscape" alt="SaaS Platform" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+<div class="absolute bottom-0 left-0 right-0 p-8 z-20 transform transition-transform duration-500 translate-y-4 group-hover:translate-y-0">
+<div class="flex items-center space-x-2 mb-4">
+<span class="text-xs bg-primary/20 text-primary px-3 py-1 rounded-full font-medium">SaaS</span>
+<span class="text-xs bg-white/10 text-white px-3 py-1 rounded-full font-medium">Web App</span>
+</div>
+<h3 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">DataFlow Analytics</h3>
+<p class="text-gray-300 mb-6 transform transition-all duration-500 opacity-0 group-hover:opacity-100">Enterprise analytics platform with real-time data visualization.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary font-medium group/link">
+<span>View Case Study</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center">
+<a href="#" class="group relative inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-black bg-primary rounded-button overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 !rounded-button">
+<span class="relative z-10">View All Projects</span>
+<div class="absolute inset-0 bg-white transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+</a>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section id="services" class="py-32 bg-[#0A0A0A]">
+<div class="container mx-auto px-6">
+<div class="mb-24 max-w-3xl">
+<h2 class="text-6xl font-bold mb-6 leading-tight">How we can <span class="text-primary">help</span> you succeed</h2>
+<p class="text-xl text-gray-400">We offer comprehensive digital solutions tailored to transform your business vision into reality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="service-card bg-gray-900 p-8 rounded-lg transition-all duration-300">
+<div class="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-layout-4-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Web Design & Development</h3>
+<p class="text-gray-400 mb-6">We create stunning, responsive websites that engage visitors and drive conversions through intuitive user experiences.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Custom Website Design</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">E-commerce Solutions</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">CMS Implementation</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Performance Optimization</span>
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-gray-900 p-8 rounded-lg transition-all duration-300">
+<div class="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-smartphone-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Mobile App Development</h3>
+<p class="text-gray-400 mb-6">We build native and cross-platform mobile applications that deliver exceptional user experiences across all devices.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">iOS & Android Development</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Cross-Platform Solutions</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">App Store Optimization</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Maintenance & Support</span>
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-gray-900 p-8 rounded-lg transition-all duration-300">
+<div class="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center mb-6">
+<i class="ri-line-chart-line text-primary ri-xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Digital Marketing</h3>
+<p class="text-gray-400 mb-6">We help businesses grow their online presence through data-driven marketing strategies and campaigns.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">SEO & Content Marketing</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Social Media Management</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">PPC Advertising</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Analytics & Reporting</span>
+</li>
+</ul>
+<a href="#" class="inline-flex items-center text-primary hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Work Process -->
+<section id="process" class="py-32 bg-black relative overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="mb-24 max-w-3xl">
+<h2 class="text-6xl font-bold mb-6 leading-tight animate-fadeInUp opacity-0">Our proven <span class="text-primary">process</span></h2>
+<p class="text-xl text-gray-400 animate-fadeInUp opacity-0" style="animation-delay: 0.2s">A systematic approach that ensures consistent delivery of exceptional results for every project.</p>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/20 via-primary to-primary/20 transform -translate-x-1/2"></div>
+<div class="space-y-24">
+<div class="process-step flex items-center gap-8 opacity-0 animate-fadeInUp" style="animation-delay: 0.3s">
+<div class="w-1/2 text-right pr-8">
+<span class="inline-block text-primary mb-2 text-sm font-medium tracking-wider">STEP 01</span>
+<h3 class="text-2xl font-bold mb-4">Discovery & Planning</h3>
+<p class="text-gray-400">Understanding your vision through in-depth consultations and research to create a solid foundation for success.</p>
+</div>
+<div class="process-node relative">
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center relative z-10">
+<div class="w-4 h-4 bg-black rounded-full"></div>
+</div>
+<div class="process-pulse absolute inset-0 bg-primary rounded-full animate-ping opacity-20"></div>
+</div>
+<div class="w-1/2 pl-8">
+<img src="https://readdy.ai/api/search-image?query=modern%20minimal%20illustration%20of%20business%20planning%20and%20strategy%2C%20dark%20theme%20with%20orange%20accents%2C%20professional%20style&width=400&height=300&seq=15&orientation=landscape" alt="Discovery" class="w-full h-48 object-cover rounded-lg shadow-lg">
+</div>
+</div>
+<div class="process-card group bg-gray-900 p-8 rounded-lg relative flex-1 opacity-0 animate-fadeInUp hover:translate-y-[-10px] transition-all duration-500" style="animation-delay: 0.4s">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center font-bold text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">02</div>
+<h3 class="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Strategy & Design</h3>
+<p class="text-gray-400">Crafting a comprehensive strategy and creating stunning designs that align with your brand identity.</p>
+<div class="absolute top-4 right-4 opacity-10 text-6xl font-bold text-primary">02</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-lg transform transition-all duration-500 group-hover:scale-105"></div>
+</div>
+<div class="process-card group bg-gray-900 p-8 rounded-lg relative flex-1 opacity-0 animate-fadeInUp hover:translate-y-[-10px] transition-all duration-500" style="animation-delay: 0.5s">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center font-bold text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">03</div>
+<h3 class="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Development & Testing</h3>
+<p class="text-gray-400">Building robust solutions with cutting-edge technology and thorough testing for optimal performance.</p>
+<div class="absolute top-4 right-4 opacity-10 text-6xl font-bold text-primary">03</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-lg transform transition-all duration-500 group-hover:scale-105"></div>
+</div>
+<div class="process-card group bg-gray-900 p-8 rounded-lg relative flex-1 opacity-0 animate-fadeInUp hover:translate-y-[-10px] transition-all duration-500" style="animation-delay: 0.6s">
+<div class="relative z-10">
+<div class="w-16 h-16 bg-primary text-black rounded-full flex items-center justify-center font-bold text-2xl mb-6 group-hover:scale-110 transition-transform duration-300">04</div>
+<h3 class="text-xl font-semibold mb-4 group-hover:text-primary transition-colors duration-300">Launch & Growth</h3>
+<p class="text-gray-400">Ensuring a smooth launch and providing ongoing support to help your digital presence thrive and evolve.</p>
+<div class="absolute top-4 right-4 opacity-10 text-6xl font-bold text-primary">04</div>
+</div>
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-lg transform transition-all duration-500 group-hover:scale-105"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Plans -->
+<section id="pricing" class="py-24 bg-[#0A0A0A]">
+<div class="container mx-auto px-6">
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-bold mb-4">Pricing Plans</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Choose the perfect plan for your business needs with our transparent pricing options.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="pricing-card bg-gray-900 p-8 rounded-lg transition-all duration-300">
+<h3 class="text-2xl font-semibold mb-2">Standard</h3>
+<p class="text-gray-400 mb-6">Perfect for small businesses and startups</p>
+<div class="mb-6">
+<span class="text-4xl font-bold">$1,499</span>
+<span class="text-gray-400">/project</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Custom Website Design (5 pages)</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Mobile Responsive</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Content Management System</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Basic SEO Setup</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">1 Month Support</span>
+</li>
+</ul>
+<a href="#contact" class="block w-full py-3 bg-transparent border border-primary text-primary font-semibold rounded-button text-center hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button">Get Started</a>
+</div>
+<div class="pricing-card bg-gray-900 p-8 rounded-lg transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-black px-4 py-1 text-sm font-semibold">Popular</div>
+<h3 class="text-2xl font-semibold mb-2">Premium</h3>
+<p class="text-gray-400 mb-6">Ideal for growing businesses with complex needs</p>
+<div class="mb-6">
+<span class="text-4xl font-bold">$3,999</span>
+<span class="text-gray-400">/project</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Custom Website Design (15 pages)</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Advanced Responsive Design</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">E-commerce Functionality</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Comprehensive SEO Package</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">6 Months Priority Support</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span class="text-gray-300">Analytics Integration</span>
+</li>
+</ul>
+<a href="#contact" class="block w-full py-3 bg-primary text-black font-semibold rounded-button text-center hover:bg-opacity-90 transition-all whitespace-nowrap !rounded-button">Get Started</a>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-gray-400 mb-4">Need a custom solution? We offer tailored packages to meet your specific requirements.</p>
+<a href="#contact" class="inline-flex items-center text-primary hover:underline">
+Contact us for a custom quote
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-4xl font-bold mb-6">About Creative Sparx</h2>
+<p class="text-gray-300 mb-6">Founded in 2018, Creative Sparx is a forward-thinking digital agency dedicated to helping businesses thrive in the digital landscape. Our team of experts combines creativity, technology, and strategy to deliver exceptional results.</p>
+<p class="text-gray-300 mb-8">We believe that great design and technology should be accessible to businesses of all sizes. Our mission is to empower our clients with innovative digital solutions that drive growth and create meaningful connections with their audiences.</p>
+<div class="flex items-center mb-8">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520male%2520entrepreneur%2C%2520creative%2520director%2C%2520tech%2520company%2520founder%2C%2520confident%2520pose%2C%2520modern%2520office%2520setting%2C%2520professional%2520attire%2C%2520neutral%2520expression%2C%2520high-quality%2520professional%2520headshot&width=100&height=100&seq=5&orientation=squarish" alt="Founder" class="w-16 h-16 rounded-full object-cover mr-4">
+<div>
+<h3 class="text-lg font-semibold">Alexander Mitchell</h3>
+<p class="text-gray-400">Founder & Creative Director</p>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<img src="https://readdy.ai/api/search-image?query=modern%2520creative%2520agency%2520office%2520space%2C%2520team%2520collaboration%2C%2520digital%2520workspace%2C%2520dark%2520theme%2520with%2520green%2520accent%2520lighting%2C%2520professional%2520environment%2C%2520tech%2520company%2520culture%2C%2520high-quality%2520professional%2520photograph&width=600&height=500&seq=6&orientation=landscape" alt="Our Team" class="w-full h-auto rounded-lg shadow-2xl">
+</div>
+</div>
+<div class="mt-24">
+<h3 class="text-2xl font-bold mb-8 text-center">Our Valued Clients</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-google-fill ri-2x"></i>
+</div>
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-amazon-fill ri-2x"></i>
+</div>
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-microsoft-fill ri-2x"></i>
+</div>
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-netflix-fill ri-2x"></i>
+</div>
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-spotify-fill ri-2x"></i>
+</div>
+<div class="flex items-center justify-center h-20 opacity-70 hover:opacity-100 transition-opacity">
+<i class="ri-apple-fill ri-2x"></i>
+</div>
+</div>
+</div>
+<div class="mt-24">
+<h3 class="text-2xl font-bold mb-8 text-center">Testimonials</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-900 p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-300 mb-6">"Creative Sparx transformed our outdated website into a modern, user-friendly platform that has significantly increased our conversion rates. Their team was professional, responsive, and delivered beyond our expectations."</p><div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520female%2520business%2520executive%2C%2520confident%2520pose%2C%2520professional%2520attire%2C%2520neutral%2520expression%2C%2520corporate%2520setting%2C%2520high-quality%2520professional%2520headshot&width=50&height=50&seq=7&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Rebecca Johnson</h4>
+<p class="text-gray-400 text-sm">CEO, TechVision Inc.</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-900 p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-300 mb-6">"Working with Creative Sparx on our mobile app development project was a game-changer for our business. Their attention to detail and innovative approach resulted in an app that our customers love using."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520male%2520business%2520executive%2C%2520confident%2520pose%2C%2520professional%2520attire%2C%2520neutral%2520expression%2C%2520corporate%2520setting%2C%2520high-quality%2520professional%2520headshot&width=50&height=50&seq=8&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Michael Thompson</h4>
+<p class="text-gray-400 text-sm">Founder, HealthHub</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-900 p-8 rounded-lg">
+<div class="flex mb-4">
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+<i class="ri-star-fill text-primary"></i>
+</div>
+<p class="text-gray-300 mb-6">"The digital marketing strategy developed by Creative Sparx has helped us achieve a 200% increase in organic traffic and a significant boost in lead generation. Their team is knowledgeable, creative, and results-driven."</p>
+<div class="flex items-center">
+<img src="https://readdy.ai/api/search-image?query=professional%2520portrait%2520of%2520a%2520female%2520business%2520executive%2C%2520confident%2520pose%2C%2520professional%2520attire%2C%2520neutral%2520expression%2C%2520corporate%2520setting%2C%2520high-quality%2520professional%2520headshot&width=50&height=50&seq=9&orientation=squarish" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+<div>
+<h4 class="font-semibold">Sophia Rodriguez</h4>
+<p class="text-gray-400 text-sm">Marketing Director, EcoStyle</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-[#0A0A0A]">
+<div class="container mx-auto px-6">
+<div class="mb-16 text-center">
+<div class="flex items-center space-x-4 justify-center mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm uppercase tracking-[0.2em] text-primary/80">Support</p>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+<h2 class="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+<p class="text-gray-400 max-w-2xl mx-auto">Find answers to common questions about our services and process.</p>
+</div>
+<div class="max-w-3xl mx-auto space-y-6">
+<div class="faq-item bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+<button class="accordion-btn w-full px-8 py-6 text-left font-semibold flex justify-between items-center group">
+<span class="group-hover:text-primary transition-colors">What services do you offer?</span>
+<i class="ri-add-line text-primary accordion-icon transition-transform duration-300"></i>
+</button>
+<div class="accordion-content px-8 pb-6">
+<p class="text-gray-400">We offer a comprehensive range of digital services including web design and development, mobile app development, e-commerce solutions, digital marketing, branding, UI/UX design, and ongoing maintenance and support.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="accordion-btn w-full px-8 py-4 text-left font-semibold flex justify-between items-center">
+<span>How long does it take to complete a project?</span>
+<i class="ri-add-line text-primary accordion-icon"></i>
+</button>
+<div class="accordion-content px-8 pb-4">
+<p class="text-gray-400">Project timelines vary depending on the scope and complexity. A standard website typically takes 4-8 weeks, while more complex projects like e-commerce platforms or custom applications may take 8-16 weeks. We'll provide a detailed timeline during our initial consultation.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="accordion-btn w-full px-8 py-4 text-left font-semibold flex justify-between items-center">
+<span>What is your payment structure?</span>
+<i class="ri-add-line text-primary accordion-icon"></i>
+</button>
+<div class="accordion-content px-8 pb-4">
+<p class="text-gray-400">We typically require a 50% deposit to begin work, with the remaining balance due upon project completion. For larger projects, we may establish a milestone-based payment schedule. We accept credit cards, bank transfers, and PayPal.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="accordion-btn w-full px-8 py-4 text-left font-semibold flex justify-between items-center">
+<span>Do you provide ongoing support after launch?</span>
+<i class="ri-add-line text-primary accordion-icon"></i>
+</button>
+<div class="accordion-content px-8 pb-4">
+<p class="text-gray-400">Yes, we offer various maintenance and support packages to ensure your digital assets continue to perform optimally. Our support includes regular updates, security monitoring, performance optimization, and content updates.</p>
+</div>
+</div>
+<div class="bg-gray-900 rounded-lg overflow-hidden">
+<button class="accordion-btn w-full px-8 py-4 text-left font-semibold flex justify-between items-center">
+<span>Can you work with clients internationally?</span>
+<i class="ri-add-line text-primary accordion-icon"></i>
+</button>
+<div class="accordion-content px-8 pb-4">
+<p class="text-gray-400">Absolutely! We work with clients globally and have experience managing remote projects efficiently. We use collaborative tools and schedule meetings at convenient times across different time zones to ensure smooth communication.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tech Courses Section -->
+<section id="courses" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="mb-16">
+<div class="flex items-center space-x-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm uppercase tracking-[0.2em] text-primary/80">Learn & Grow</p>
+</div>
+<h2 class="text-4xl font-bold mb-6">Tech Courses</h2>
+<p class="text-xl text-gray-400 max-w-2xl">Master the latest technologies with our comprehensive courses designed for all skill levels.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="course-card group bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02]">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20web%20development%20workspace%20with%20dark%20theme%2C%20code%20editor%2C%20professional%20development%20environment%2C%20minimal%20aesthetic&width=400&height=300&seq=20&orientation=landscape" alt="Web Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Beginner</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Modern Web Development</h3>
+<p class="text-gray-400 mb-4">Learn the fundamentals of web development with HTML, CSS, and JavaScript.</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm text-gray-400">8 Weeks • 24 Lessons</span>
+<span class="text-primary font-semibold">$299</span>
+</div>
+<a href="#" class="block w-full py-3 bg-gray-800 text-center text-white font-semibold rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button">Enroll Now</a>
+</div>
+</div>
+<div class="course-card group bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02]">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=mobile%20app%20development%20workspace%20with%20dark%20theme%2C%20mobile%20devices%2C%20UI%20design%20tools%2C%20professional%20development%20environment&width=400&height=300&seq=21&orientation=landscape" alt="App Development" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Intermediate</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Mobile App Development</h3>
+<p class="text-gray-400 mb-4">Master mobile app development for iOS and Android platforms.</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm text-gray-400">10 Weeks • 30 Lessons</span>
+<span class="text-primary font-semibold">$399</span>
+</div>
+<a href="#" class="block w-full py-3 bg-gray-800 text-center text-white font-semibold rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button">Enroll Now</a>
+</div>
+</div>
+<div class="course-card group bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02]">
+<div class="relative h-48 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=UI%20UX%20design%20workspace%20with%20dark%20theme%2C%20design%20tools%2C%20wireframes%2C%20professional%20creative%20environment&width=400&height=300&seq=22&orientation=landscape" alt="UI/UX Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Advanced</span>
+</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">UI/UX Design Mastery</h3>
+<p class="text-gray-400 mb-4">Learn professional UI/UX design principles and tools.</p>
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm text-gray-400">12 Weeks • 36 Lessons</span>
+<span class="text-primary font-semibold">$499</span>
+</div>
+<a href="#" class="block w-full py-3 bg-gray-800 text-center text-white font-semibold rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button">Enroll Now</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a href="#" class="inline-flex items-center space-x-2 px-8 py-4 bg-primary text-black font-semibold rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap !rounded-button">
+<span>View All Courses</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Blog Section -->
+<section id="blog" class="py-24 bg-[#0A0A0A]">
+<div class="container mx-auto px-6">
+<div class="mb-16">
+<div class="flex items-center space-x-4 mb-8">
+<div class="h-[1px] w-12 bg-primary"></div>
+<p class="text-sm uppercase tracking-[0.2em] text-primary/80">Latest Insights</p>
+</div>
+<h2 class="text-4xl font-bold mb-6">Blog & Resources</h2>
+<p class="text-xl text-gray-400 max-w-2xl">Stay updated with the latest trends, insights, and best practices in digital technology.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="blog-card group">
+<a href="#" class="block relative h-64 rounded-lg overflow-hidden mb-6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=modern%20web%20development%20trends%20visualization%2C%20dark%20theme%2C%20professional%20tech%20illustration&width=400&height=300&seq=23&orientation=landscape" alt="Web Development Trends" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">Development</span>
+</div>
+</a>
+<div class="space-y-4">
+<div class="flex items-center space-x-4 text-sm text-gray-400">
+<span>April 25, 2025</span>
+<span>•</span>
+<span>5 min read</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">The Future of Web Development: Trends to Watch in 2025</h3>
+<p class="text-gray-400">Explore the latest trends shaping the future of web development and how they impact business growth.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary group/link">
+<span>Read More</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+<div class="blog-card group">
+<a href="#" class="block relative h-64 rounded-lg overflow-hidden mb-6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=AI%20and%20machine%20learning%20concept%20visualization%2C%20dark%20theme%2C%20futuristic%20tech%20illustration&width=400&height=300&seq=24&orientation=landscape" alt="AI in Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">AI & Design</span>
+</div>
+</a>
+<div class="space-y-4">
+<div class="flex items-center space-x-4 text-sm text-gray-400">
+<span>April 23, 2025</span>
+<span>•</span>
+<span>4 min read</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">How AI is Revolutionizing Digital Design</h3>
+<p class="text-gray-400">Discover how artificial intelligence is transforming the landscape of digital design and creativity.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary group/link">
+<span>Read More</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+<div class="blog-card group">
+<a href="#" class="block relative h-64 rounded-lg overflow-hidden mb-6">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+<img src="https://readdy.ai/api/search-image?query=mobile%20app%20UI%20design%20showcase%2C%20dark%20theme%2C%20professional%20mobile%20interface&width=400&height=300&seq=25&orientation=landscape" alt="Mobile UX" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+<div class="absolute bottom-4 left-4 z-20">
+<span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full">UX Design</span>
+</div>
+</a>
+<div class="space-y-4">
+<div class="flex items-center space-x-4 text-sm text-gray-400">
+<span>April 20, 2025</span>
+<span>•</span>
+<span>6 min read</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">Mastering Mobile UX: Essential Design Principles</h3>
+<p class="text-gray-400">Learn the key principles of creating exceptional mobile user experiences that engage and convert.</p>
+<a href="#" class="inline-flex items-center space-x-2 text-primary group/link">
+<span>Read More</span>
+<i class="ri-arrow-right-line transition-transform duration-300 group-hover/link:translate-x-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a href="#" class="inline-flex items-center space-x-2 px-8 py-4 bg-transparent border-2 border-primary text-primary font-semibold rounded-button hover:bg-primary hover:text-black transition-all whitespace-nowrap !rounded-button">
+<span>View All Articles</span>
+<i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-24 bg-black">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-1">
+<h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
+<p class="text-gray-300 mb-8">Ready to transform your digital presence? Contact us today to discuss your project and discover how we can help your business grow.</p>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold mb-1">Location</h3>
+<p class="text-gray-400">123 Innovation Drive, San Francisco, CA 94103</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold mb-1">Email</h3>
+<p class="text-gray-400">hello@creativesparx.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-semibold mb-1">Phone</h3>
+<p class="text-gray-400">+1 (415) 555-1234</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h3 class="font-semibold mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-2">
+<form class="bg-gray-900 p-8 rounded-lg">
+<h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+<input type="text" id="name" class="w-full bg-gray-800 border-none rounded p-3 text-white focus:ring-2 focus:ring-primary outline-none" placeholder="John Doe">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-400 mb-2">Your Email</label>
+<input type="email" id="email" class="w-full bg-gray-800 border-none rounded p-3 text-white focus:ring-2 focus:ring-primary outline-none" placeholder="john@example.com">
+</div>
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-sm font-medium text-gray-400 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full bg-gray-800 border-none rounded p-3 text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Project Inquiry">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full bg-gray-800 border-none rounded p-3 text-white focus:ring-2 focus:ring-primary outline-none" placeholder="Tell us about your project..."></textarea>
+</div>
+<div class="mb-6 flex items-start">
+<input type="checkbox" id="privacy" class="mr-3 mt-1">
+<label for="privacy" class="text-sm text-gray-400">I agree to the <a href="#" class="text-primary hover:underline">Privacy Policy</a> and consent to having my data processed.</label>
+</div>
+<button type="submit" class="w-full py-3 bg-primary text-black font-semibold rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap !rounded-button">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0A0A0A] pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 inline-block">logo</a>
+<p class="text-gray-400 mb-6">We create digital experiences that captivate and convert, helping businesses thrive in the digital landscape.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Web Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Mobile App Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">E-commerce Solutions</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Digital Marketing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Branding & Identity</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Company</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Our Work</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and insights.</p>
+<form class="mb-4">
+<div class="flex">
+<input type="email" placeholder="Your email address" class="w-full bg-gray-900 border-none rounded-l p-3 text-white focus:ring-2 focus:ring-primary outline-none">
+<button type="submit" class="bg-primary text-black px-4 rounded-r hover:bg-opacity-90 transition-all whitespace-nowrap">Subscribe</button>
+</div>
+</form>
+<div class="flex items-center space-x-4">
+<div class="flex items-center justify-center">
+<i class="ri-visa-fill ri-xl"></i>
+</div>
+<div class="flex items-center justify-center">
+<i class="ri-mastercard-fill ri-xl"></i>
+</div>
+<div class="flex items-center justify-center">
+<i class="ri-paypal-fill ri-xl"></i>
+</div>
+<div class="flex items-center justify-center">
+<i class="ri-apple-fill ri-xl"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Creative Sparx. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 text-sm hover:text-primary transition-colors">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-8 right-8 z-50">
+<a href="#" class="w-12 h-12 bg-primary text-black rounded-full flex items-center justify-center hover:bg-opacity-90 transition-all">
+<i class="ri-arrow-up-line ri-lg"></i>
+</a>
+</div>
+<script>
+// window.addEventListener('load', function() {
+//   setTimeout(() => {
+//     document.querySelector('.preloader').style.opacity = '0';
+//     document.querySelector('.preloader').style.pointerEvents = 'none';
+//   }, 800);
+// });
+document.addEventListener('DOMContentLoaded', function() {
+const typewriterText = document.querySelector('.typewriter-text');
+const words = ['Masterpieces', 'Experiences', 'Innovation'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isWaiting = false;
+function type() {
+const currentWord = words[wordIndex];
+if (isDeleting) {
+typewriterText.textContent = currentWord.substring(0, charIndex - 1);
+charIndex--;
+} else {
+typewriterText.textContent = currentWord.substring(0, charIndex + 1);
+charIndex++;
+}
+typewriterText.style.borderRight = '2px solid #FF9C00';
+setTimeout(() => {
+typewriterText.style.borderRight = 'transparent';
+}, 500);
+if (!isDeleting && charIndex === currentWord.length) {
+isWaiting = true;
+setTimeout(() => {
+isDeleting = true;
+isWaiting = false;
+}, 2000);
+} else if (isDeleting && charIndex === 0) {
+isDeleting = false;
+wordIndex = (wordIndex + 1) % words.length;
+}
+const typingSpeed = isDeleting ? 100 : isWaiting ? 1000 : 200;
+setTimeout(type, typingSpeed);
+}
+type();
+const mobileMenuBtn = document.querySelector('.md\\:hidden');
+const mobileMenu = document.querySelector('.mobile-menu');
+mobileMenuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('active');
+});
+// Close mobile menu when clicking links
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+link.addEventListener('click', () => {
+mobileMenu.classList.remove('active');
+});
+});
+const cursor = document.querySelector('.custom-cursor');
+const processCards = document.querySelectorAll('.process-card');
+let lastScrollTop = 0;
+window.addEventListener('scroll', () => {
+const st = window.pageYOffset || document.documentElement.scrollTop;
+processCards.forEach((card, index) => {
+const rect = card.getBoundingClientRect();
+const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+if (isVisible) {
+const progress = 1 - (rect.top / window.innerHeight);
+const rotation = st > lastScrollTop ? progress * 5 : progress * -5;
+card.style.transform = `perspective(1000px) rotateX(${rotation}deg) translateZ(${progress * 20}px)`;
+}
+});
+lastScrollTop = st <= 0 ? 0 : st;
+}, false);
+const animateOnScroll = (entries, observer) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+observer.unobserve(entry.target);
+}
+});
+};
+const observer = new IntersectionObserver(animateOnScroll, {
+threshold: 0.1,
+rootMargin: '0px'
+});
+document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+el.style.opacity = '0';
+el.style.transform = 'translateY(20px)';
+observer.observe(el);
+});
+const cursorFollower = document.querySelector('.custom-cursor-follower');
+let cursor = document.querySelector('.custom-cursor');
+let cursorFollower = document.querySelector('.custom-cursor-follower');
+let mouseX = 0;
+let mouseY = 0;
+let followerX = 0;
+let followerY = 0;
+document.addEventListener('mousemove', (e) => {
+mouseX = e.clientX;
+mouseY = e.clientY;
+cursor.style.left = mouseX + 'px';
+cursor.style.top = mouseY + 'px';
+});
+function animate() {
+let distX = mouseX - followerX;
+let distY = mouseY - followerY;
+followerX += distX * 0.1;
+followerY += distY * 0.1;
+cursorFollower.style.left = followerX + 'px';
+cursorFollower.style.top = followerY + 'px';
+requestAnimationFrame(animate);
+}
+animate();
+document.querySelectorAll('a, button, input, textarea, .hover-target').forEach(element => {
+element.addEventListener('mouseenter', () => {
+cursor.classList.add('hover');
+cursorFollower.classList.add('hover');
+});
+element.addEventListener('mouseleave', () => {
+cursor.classList.remove('hover');
+cursorFollower.classList.remove('hover');
+});
+});
+document.addEventListener('mousedown', () => {
+cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
+cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.8)';
+});
+document.addEventListener('mouseup', () => {
+cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+});
+// Hide cursor when mouse leaves window
+document.addEventListener('mouseleave', () => {
+cursor.style.opacity = '0';
+cursorFollower.style.opacity = '0';
+});
+document.addEventListener('mouseenter', () => {
+cursor.style.opacity = '1';
+cursorFollower.style.opacity = '1';
+});
+const observerOptions = {
+threshold: 0.2
+};
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('section > div > *:not(div)').forEach(element => {
+element.classList.add('fade-up');
+observer.observe(element);
+});
+document.querySelectorAll('.service-card, .work-item, .pricing-card').forEach(element => {
+element.classList.add('hover-scale');
+});
+document.getElementById('accordion-btn-1').addEventListener('click', function() {
+const content = document.getElementById('accordion-content-1');
+const icon = document.getElementById('accordion-icon-1');
+if (content.style.maxHeight !== '0px') {
+content.style.maxHeight = '0px';
+icon.classList.remove('ri-subtract-line');
+icon.classList.add('ri-add-line');
+} else {
+content.style.maxHeight = content.scrollHeight + 'px';
+icon.classList.remove('ri-add-line');
+icon.classList.add('ri-subtract-line');
+}
+});
+});
+</script>
+</body>
+</html>
